@@ -1,0 +1,28 @@
+.home-container{
+    div{
+        text-align: justify;
+    }
+    .text{
+        padding-left: 22px;
+    }
+    h4{
+        margin-top:1rem;
+    }
+    .tagline{
+        font-family: allura;
+        font-size: 2rem;
+        margin:1rem auto;
+    }
+    .strips{
+        height:100%;
+        background-size:contain;
+    }
+    .dots{
+        position: absolute;
+        top: 4%;
+        right: 10%
+    }
+    .btmCupCakes{
+        margin: auto;
+    }
+}

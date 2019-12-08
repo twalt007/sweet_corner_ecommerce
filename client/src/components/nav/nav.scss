@@ -1,0 +1,38 @@
+.main-nav{
+    position: absolute;
+    right: 0;
+    margin: 2px;
+    padding: 0;
+    font-size: 0;
+    font-family: serif;
+
+    li{
+        display: inline-block;
+        margin: 0px 12px 0px 12px;
+        font-size: 1rem;
+        text-align: center;
+        text-transform: uppercase;
+        color: #754b23;
+        text-shadow: 1px 1px 3px darkgray;
+        cursor: pointer;
+        
+        a, a:visited{
+            text-decoration: none;
+            color: #754b23
+        }
+        a:hover{
+            color:orange;
+        }
+        
+
+    }
+}
+
+
+// Link:hover{
+    //     color: orange;
+    // }
+    // Link:visited{
+    //     text-decoration: none;
+    //     color: initial;
+    // }

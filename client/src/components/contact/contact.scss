@@ -1,0 +1,25 @@
+.contact-container{
+    margin: 0 auto;
+    text-align: justify;
+    position: relative;
+    .textBody, .schedule{
+        padding-left: 90px;
+    }
+    a, a:visited{
+        text-decoration: none;
+        color: #754b23
+    }
+    h4{
+        margin-top:1rem;
+    }
+    .upDots{
+        position: absolute;
+        left: 63%;
+        bottom: 5%
+    }
+    .downDots{
+        position: absolute;
+        top: 20%;
+        left: 20%
+    }
+}

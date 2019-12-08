@@ -1,0 +1,40 @@
+.guest-checkout-container{
+    *{
+        width: 310px;
+        color: #754b23;
+        margin: 7px auto;
+        border: none;
+        position: relative;
+    }
+    h2{
+        font-weight: 600;
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+    .input{
+        height: 40px;
+    }
+    .input-field:nth-of-type(3n+1) input{
+        background-color: #e86b35;
+    }
+    .input-field:nth-child(3n+2) input{
+        background-color: #f6b53e;
+    }
+    .input-field:nth-child(3n+3) input{
+        background-color: #06b4af;
+    }
+    button{
+        background-color: #e86b35;
+        width: 170px;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+    .input::placeholder{
+        padding: 4px;
+        font-size: 1rem;
+    }
+    
+}

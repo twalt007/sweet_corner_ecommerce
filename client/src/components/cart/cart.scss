@@ -1,0 +1,33 @@
+.cart-container{
+    margin-bottom: 50px;
+    .table-head{
+        font-size: 1.5rem;
+        color: #754b23;
+    }
+    .table-body{
+        color: #754b23;
+        font-size: 1.2rem;
+    }    
+    .grand-total{
+        // position: absolute;
+        right: 0; 
+        font-size: 2rem;
+        font-weight: 600;
+        .total-quantity, .total-cost, .title{
+            display: inline-block;
+            color: #754b23;
+            margin: 10px 25px;
+        }      
+    }    
+    .guest-checkout{
+        background-color: #e86b35;
+        font-weight: 600;
+        color: white;
+        font-size: 1.5rem;
+        padding: 10px;    
+    }
+    .guest-checkout:hover, .guest-checkout:visited{
+        text-decoration: none;
+        color:white;
+    }
+}

@@ -1,0 +1,37 @@
+.contactFormContainer{
+    *{
+        width: 310px;
+        color: #754b23;
+        margin: 5px 0;
+        border: none;
+        text-align: left;
+    }
+    .input-field:nth-of-type(3n+1) input{
+        background-color: #e86b35;
+    }
+    .input-field:nth-child(3n+2) input{
+        background-color: #f6b53e;
+    }
+    .input-field:nth-child(3n+3) input{
+        background-color: #06b4af;
+    }
+    .message{
+        height: 115px;
+        background-color: #f6b53e;
+    }
+    .form-actions{
+        text-align: right;
+        button{
+            text-align: center;
+            background-color: #06b4af;
+            width: 155px;
+        }
+        button:hover{
+            cursor: pointer;
+        }
+    }
+    .input::placeholder, .message::placeholder{
+        padding: 3px;
+    }
+    
+}
