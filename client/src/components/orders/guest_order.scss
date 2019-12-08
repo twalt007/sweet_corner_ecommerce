@@ -1,0 +1,37 @@
+.guest-order-container{
+    color:  #754b23;
+    .blue{
+        color:#06b4af
+    }
+    .yellow{
+        color: #f6b53e
+    }
+    .orange{
+        color: #e86b35
+    }
+    .bold{
+        font-weight: 600;
+    }
+    .top-half{
+        position: relative;
+        .overview{
+            text-align: left;
+            .cost{
+                display: inline;
+            }
+        }
+    }
+    table>*{
+        color: #754b23
+    }
+    .grand-total {
+        .cost{
+            display: inline-block;
+        } 
+        .summary, .total-quantity, .cost{
+            font-size: 1.5rem;
+        }
+    }
+    
+
+}

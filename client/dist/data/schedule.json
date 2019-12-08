@@ -1,0 +1,35 @@
+{
+    "success": true,
+    "schedule": [
+        {
+            "close": "17:00",
+            "day": "Monday",
+            "open": "09:00",
+            "pid": "1"
+        },
+        {
+            "close": "17:00",
+            "day": "Tuesday",
+            "open": "09:00",
+            "pid": "2"
+        },
+        {
+            "close": "19:00",
+            "day": "Wednesday",
+            "open": "09:00",
+            "pid": "3"
+        },
+        {
+            "close": "19:00",
+            "day": "Thursday",
+            "open": "09:00",
+            "pid": "4"
+        },
+        {
+            "close": "21:00",
+            "day": "Friday",
+            "open": "09:00",
+            "pid": "5"
+        }
+    ]
+}

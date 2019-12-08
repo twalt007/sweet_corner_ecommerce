@@ -1,0 +1,24 @@
+.footer-container{
+    height: 80px;
+    background-color: #06b4af;
+    color: ivory;
+    .row{
+        position: relative;
+        top: 20px;
+    }
+    .decDots{
+        position: relative;
+        right: 70px;
+    }
+    .copyright{
+        position: relative;
+        font-size: .8rem;
+        top: 30px;
+    }
+    .phone{
+        position: relative;
+        top: 10px;
+    }
+    
+
+}
