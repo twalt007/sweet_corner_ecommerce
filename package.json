@@ -19,6 +19,7 @@
   "homepage": "https://github.com/twalt007/m41019_sweet_corner#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "jwt-simple": "^0.5.6",
     "mysql2": "^2.0.1"
   },
   "devDependencies": {
