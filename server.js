@@ -5,6 +5,7 @@ const path = require('path');
 
 const app = express();
 
+app.use(express.urlencoded({extended: false}));
 app.use(express.static(path.resolve(__dirname, 'client','dist')));
 
 app.use(routes);
