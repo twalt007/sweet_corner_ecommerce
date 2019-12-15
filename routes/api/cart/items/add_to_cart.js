@@ -1,6 +1,7 @@
 const db = require('../../../../db');
 const cartJwt = require('../../../../config/cart_jwt.json');
 const jwt = require('jwt-simple');
+const { buildUrl, getCartTotals } = require('../../../../helpers')
 
 module.exports = async (req, res) => {
 
@@ -25,12 +26,10 @@ module.exports = async (req, res) => {
         res.status(404).send('Product not found');
         return;
     };
-    console.log('Found Product:', product);
     // If no cart, create a new cart
     if(!cart){
         const [[ cartStatus ]] = await db.query('SELECT id FROM cartStatuses WHERE mid="active"');
         const [ result ] = await db.query('INSERT INTO cart (pid, statusId) VALUES (UUID(), ?)', [cartStatus.id]);
-        console.log('Result:', result);
         cart = {
             id: result.insertId
         };
@@ -54,13 +53,29 @@ module.exports = async (req, res) => {
         VALUES (UUID(), ?, ?, ?)`
         , [cart.id, product.id, quantity]);
     };
-    // If product already in cart, increase quantity
-    // Else create cart item for product
+
+    const [[cartData]] = await db.query(`
+    SELECT c.pid AS cartId, ci.createdAt AS added, p.cost AS 'each', ci.pid AS itemId, p.name, p.pid AS productId, ci.quantity, i.altText, i.type, i.file, (cost * quantity) AS total FROM cartItems AS ci 
+	JOIN cart AS c ON ci.cartId=c.id
+    JOIN products AS p ON ci.productId=p.id
+    JOIN images AS i ON ci.productId=i.productId 
+    WHERE cartId=? AND ci.productId=? AND i.type="thumbnail"
+    `, [cart.id, product.id]);
+
+    const {cartId, altText, type, file, ...c} = cartData;
+    const total = await getCartTotals(cart.id);
+    
     // Create a message to send back to user of what was added
-    const message = `${quantity} ${product.name} added to cart`;
-    console.log("token", token);
     res.send({
         cartToken: token,
-        message: message
+        cartId,
+        items: {
+            ...c,
+            thumbnail: {
+                altText,
+                url: buildUrl(req,type,file)
+            },
+        },
+        total
     });
 }
