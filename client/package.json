@@ -4,10 +4,10 @@
   "description": "module 3 final project",
   "main": "index.js",
   "proxy": {
-    "/api/*":{
+    "/api/*": {
       "target": "http://localhost:3001"
     },
-    "/images/*":{
+    "/images/*": {
       "target": "http://localhost:3001"
     }
   },

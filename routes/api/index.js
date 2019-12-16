@@ -3,7 +3,6 @@ const productsRouter = require('./products');
 const cartRouter = require('./cart');
 const withCart = require('../../middleware/with_cart');
 
-
 //  Routes for  /api
 router.use('/products',productsRouter);
 
