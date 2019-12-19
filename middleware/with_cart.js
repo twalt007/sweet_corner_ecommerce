@@ -7,7 +7,7 @@ module.exports = (req, res, next) => {
     req.cart = null;
     req.token = null;
 
-    if(!token) {
+    if(!token || token.indexOf('Object') > -1) {
         next();
         return;
     }

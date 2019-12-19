@@ -14,7 +14,7 @@ exports.buildUrl = (req, type, file) => {
 
 exports.getCartTotals = async (cartId) => {
     const [[totals]] = await db.query(`
-    SELECT SUM(quantity) AS items, SUM(cost*quantity) AS total FROM cartItems AS ci 
+    SELECT SUM(quantity) AS items, SUM(cost*quantity) AS cost FROM cartItems AS ci 
     JOIN products AS p  ON ci.productId = p.id
     WHERE cartId = ?`, [cartId]);
     
