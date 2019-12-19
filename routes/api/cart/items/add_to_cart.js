@@ -5,11 +5,6 @@ const { buildUrl, getCartTotals } = require('../../../../helpers')
 
 module.exports = async (req, res) => {
 
-    // res.send('Cart Id: ' + req.cart.id);
-    // return;
-
-    
-
     // Check for existing cart
     const { product_id } = req.params;
     const { quantity = 1 } = req.body;
@@ -50,8 +45,8 @@ module.exports = async (req, res) => {
         const [ itemResult ] = await db.execute(`
         INSERT INTO cartItems 
         (pid, cartId, productId, quantity)
-        VALUES (UUID(), ?, ?, ?)`
-        , [cart.id, product.id, quantity]);
+        VALUES (UUID(), ?, ?, ?)`, 
+        [cart.id, product.id, quantity]);
     };
 
     const [[cartData]] = await db.query(`
