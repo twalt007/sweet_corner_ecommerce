@@ -11,7 +11,7 @@ module.exports = async (req,res, next) => {
 
         if(cart){
             
-            const [cartData] = await db.query(`
+            const [cartData] = await db.execute(`
             SELECT ci.pid AS cartId, ci.createdAt AS added, p.cost AS \`each\`, ci.pid as itemId, p.name as name, p.pid as productId, ci.quantity, (cost*quantity) AS total, i.altText, i.type, i.file FROM cartItems AS ci
             JOIN products AS p ON ci.productId = p.id
             JOIN images AS i ON p.id = i.productId
@@ -28,12 +28,11 @@ module.exports = async (req,res, next) => {
                     }
                 }
             });
-            const total = await getCartTotals(cart.id);
 
             output.cartId = cartData[0].cartId;
-            output.message = undefined;
+            delete output.message;
             output.items = items;
-            output.total = total;
+            output.total = await getCartTotals(cart.id);
             //get all cart items
         }
 
