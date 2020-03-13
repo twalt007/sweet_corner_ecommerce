@@ -37,6 +37,7 @@ export const clearProductDetails = () => {
 
 export const addItemToCart = (productID,quantity) => async dispatch => {
     try{
+        console.log('inside action addItemToCart, lookin at localStorage: ', localStorage);
         const cartToken = localStorage.getItem('sc-cart-token');
         const axiosConfig = {
             headers: {

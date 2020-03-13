@@ -9,3 +9,9 @@ export default {
     GET_GUEST_ORDER_DETAILS: "GET_GUEST_ORDER_DETAILS"
 };
 
+
+//get_cart_totals
+//get acctive CLEAR_PRODCUT_DETAILS
+//create guest order
+//get guest order details
+

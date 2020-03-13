@@ -6,6 +6,12 @@ module.exports = (error, req, res, next) => {
         message = error.message;
         status = error.status
     }
+    if(error.status=422){
+        //do stuff
+    }
+    else{
+        console.error(error);
+    }
 
     res.status(status).send(message);
 };

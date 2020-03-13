@@ -12,7 +12,9 @@ module.exports = async (req, res) => {
     // Check for valid product
 
     if(isNaN(quantity) || quantity <1){
-        res.status(422).send('Invalid Quantity recieved');
+        var error= new ApiError(422,"Invalid Quantity recieved")
+        // res.status(422).send('Invalid Quantity recieved');
+        next(error);
         return;
     }
 
