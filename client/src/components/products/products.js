@@ -39,7 +39,7 @@ class Products extends Component{
 }
 
 function mapStateToProps(state){
-    return {products: state.products.list}
+    return {products: state.products.list};
 }
 
 export default connect(mapStateToProps,{
