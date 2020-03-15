@@ -37,7 +37,6 @@ export const clearProductDetails = () => {
 
 export const addItemToCart = (productID,quantity) => async dispatch => {
     try{
-        console.log('inside action addItemToCart, lookin at localStorage: ', localStorage);
         const cartToken = localStorage.getItem('sc-cart-token');
         const axiosConfig = {
             headers: {
@@ -66,7 +65,6 @@ export const getActiveCart = () => async dispatch => {
             }
         }
         const resp = await axios.get(`/api/cart`,axiosConfig)
-        console.log("getative cart", resp)
         dispatch({
             type: types.GET_ACTIVE_CART,
             cart: resp.data
@@ -105,6 +103,7 @@ export const createGuestOrder = (guest) => async dispatch => {
             firstName: guest.firstName,
             lastName: guest.lastName
         }
+        console.log("create guest order data: ", data, "create guest order axiosConfig: ", axiosConfig);
         const resp = await axios.post(`/api/orders/guest`,data,axiosConfig);
         console.log("create guest order response", resp);
         localStorage.removeItem('sc-cart-token');
