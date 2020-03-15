@@ -11,6 +11,7 @@ module.exports = async (req, res) => {
     let { cart, token } = req;
     // Check for valid product
 
+    console.log("inside add_to_cart --> token: ", token);
     if(isNaN(quantity) || quantity <1){
         var error= new ApiError(422,"Invalid Quantity recieved")
         // res.status(422).send('Invalid Quantity recieved');
@@ -36,6 +37,9 @@ module.exports = async (req, res) => {
         };
         token = jwt.encode(tokenData, cartJwt.secret);   ///whathappens once our secret  is gone cause we're using the template in production??
     };
+
+    console.log("inside add_to_cart after--> token: ", token);
+
     // Does item already exist in cart
     const [[cartItem = null]] = await db.query('SELECT id FROM cartItems WHERE cartId=? AND productId=?', [cart.id, product.id]);
     // If product already in cart, increase quantity
