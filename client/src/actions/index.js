@@ -103,9 +103,8 @@ export const createGuestOrder = (guest) => async dispatch => {
             firstName: guest.firstName,
             lastName: guest.lastName
         }
-        console.log("create guest order data: ", data, "create guest order axiosConfig: ", axiosConfig);
         const resp = await axios.post(`/api/orders/guest`,data,axiosConfig);
-        console.log("create guest order response", resp);
+        console.log("create guest order response: ", resp);
         localStorage.removeItem('sc-cart-token');
         dispatch({
             type: types.CREATE_GUEST_ORDER,
@@ -119,7 +118,7 @@ export const createGuestOrder = (guest) => async dispatch => {
             orderID: resp.data.id
         })
     }catch (error){
-        console.log("Error with Guest Checkout", error);
+        console.log("Guest Checkout", error);
     }
 }
 

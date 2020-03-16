@@ -33,7 +33,6 @@ module.exports = async (req,res, next) => {
             delete output.message;
             output.items = items;
             output.total = await getCartTotals(cart.id);
-            //get all cart items
         }
 
         res.send(output);
