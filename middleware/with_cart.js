@@ -16,7 +16,6 @@ module.exports = (req, res, next) => {
 
     const tokenData = jwt.decode(token, cartConfig.secret);
 
-    console.log("token Data: ", tokenData);
     req.cart = {
         id: tokenData.cartId
     };

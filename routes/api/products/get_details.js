@@ -1,4 +1,3 @@
-const router = require('express').Router();
 const db = require('../../../db');
 const { buildUrl } = require('../../../helpers');
 

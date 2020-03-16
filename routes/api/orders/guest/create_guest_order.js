@@ -1,81 +1,65 @@
 const db = require('../../../../db');
-const orderJwt = require('../../../../config/order_jwt.json');
-const jwt = require('jwt-simple');
 
-module.exports = async (req, res) => {
+module.exports = async (req, res, next) => {
+
     try{
-        //pull our recieved data  --> needto pull out the cart token, see get cart, plus other user input; need to flesh out below, need to make a database
-        const {cart} = req;
-        const {body} = req;
-        let { order, token } = req;
-        console.log("create_guest_order cart: ", cart);
-        console.log("create_guest_order body: ", body);
-        console.log("create_guest_order token: ", token);
         
-        if(cart){
+        const {cart} = req;
+        const {email, firstName, lastName } = req.body;
 
-            if(!order){
-                const [[ orderStatus ]] = await db.query('SELECT id FROM cartStatuses WHERE mid="active"');
-                const [ result ] = await db.query('INSERT INTO cart (pid, statusId) VALUES (UUID(), ?)', [cartStatus.id]);
-                cart = {
-                    id: result.insertId
-                };
-                const tokenData = {
-                    cartId: cart.id,
-                    ts: Date.now(),
-                };
-                token = jwt.encode(tokenData, cartJwt.secret);   ///whathappens once our secret  is gone cause we're using the template in production??
-            };
-
+        let output = {
+            message: "Order error.  Please verify there are items in your cart and the cart is still active.",
+            id: null
         }
 
-        //if no order id, create an order id
-        
+        if(!email){
+            var error = new ApiError(400, "Missing email.");
+            next(error);
+            return;
+        }
+        if(!firstName){
+            var error = new ApiError(400, "Missing first name.");
+            next(error);
+            return;
+        }
+        if(!lastName){
+            var error = new ApiError(400, "Missing last name.")
+            next(error);
+            return;
+        }
+        if( !cart ){
+            var error = new ApiError(400, "Cart information invalid. Cart either does not contain any items or the cart is no longer active.")
+            next(error);
+            return;
+        }
+        if( email && firstName && lastName && cart.id ){
 
-        res.send({
-            body
-        })
+            const [[ orderStatus ]] = await db.query('SELECT id FROM orderStatuses WHERE mid="pending"');
 
+            const [result] = await db.execute(`
+            INSERT INTO orders 
+            (pid, statusId, cartId, firstName, lastName, email)
+            VALUES (UUID(), ?, ?, ?, ?, ?)
+            `, [orderStatus.id, cart.id, firstName, lastName, email]);
+
+            orderId = result.insertId;
+
+            const [[ uuid ]] = await db.query(`
+            SELECT pid FROM orders WHERE id = ?
+            `, [orderId]);
+
+            output.message = "Your order has been placed."
+            output.id = uuid.pid;
+        }
+
+        res.send(output);
+
+    } catch (error){
+        console.log("error", error);
+        next(error);    
     }
-    
-}
+};
 
-
-
-
-
-//see how much can reason through for this part - get the information from the front end to come, see if can't return thhe infotmation needded/logic out if need to set up new section of db
-//readu up on the other stuff I plan to do
-//create github acct
-//read up on what happened to by server
-//add in screenshot of my own blog site so thhat at least have bases covered
-
-
-
-//class: try to get server up and running again
-//learn about what good pracdtices would be for getting the below API set up
-//get my personal portfolio site put up
-
-
-
-//test that endpoint working
-//create portion of database to store orders, and associate with a guest order
-//create a guest order ID number
-//get information, make 'clean'
-//return information from database
-//make cart token invalid  ==> 
-
-// 1. copying cart portion from URLSearchParams
-// 2. taking final portion before res. for deleting he cart based off inf in with cart
-// 3. checking to see what we don on the front end if there is no token id.  for the guest checkout if clicked at very begining
-
-
-//next => get guest order details ==> 
-
-
-
-
-//recieve email, name, 
 
 
 
