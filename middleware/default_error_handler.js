@@ -12,7 +12,7 @@ module.exports = (error, req, res, next) => {
     // else{
     //     console.error(error);
     // }
-    console.log(message);
+    
     res.status(status).send(message);
 };
 

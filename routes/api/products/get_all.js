@@ -2,8 +2,8 @@ const db = require('../../../db');
 const { buildUrl } = require('../../../helpers')
 
 module.exports = async (req,res) =>{
-
-    const[results] = await db.query(`
+    try{
+        const[results] = await db.query(`
             SELECT p.pid AS id, caption, cost, p.name, i.pid AS tnID, altText, file, type
             FROM products AS p 
             JOIN images AS i 
@@ -26,5 +26,10 @@ module.exports = async (req,res) =>{
             });
     
         res.send({ products });
+    }
+    catch(error){
+        console.log(error)
+        next(error);
+    }
 }
 
