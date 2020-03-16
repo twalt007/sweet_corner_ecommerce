@@ -1,2 +1,2 @@
 # m41019_sweet_corner
-Backend for the sweet corner e-commerce website
+Full-stack e-commerce site with client built in React JS and server CRUD abilities built in Node.js using Express.
