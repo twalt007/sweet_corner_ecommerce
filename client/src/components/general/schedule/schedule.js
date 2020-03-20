@@ -15,7 +15,6 @@ class Schedule extends Component {
     componentDidMount(e){
         const apiUrl = "/data/schedule.json" 
         axios.get(apiUrl).then((resp)=>{
-            console.log("api response", resp);
             this.setState({
                 schedule: resp.data.schedule
             });

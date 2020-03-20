@@ -11,7 +11,6 @@ import Money from '../general/money'
 class GuestOrderDetails extends Component{
     componentDidMount(){
         const {match, location} = this.props;
-        console.log("Guest Order Details props", this.props, "guest order match: ", match)
         const query = queryToObject(location.search);
         const orderId = match.params.order_id;
         this.props.getGuestOrderDetails(orderId, query.email);
@@ -45,7 +44,6 @@ class GuestOrderDetails extends Component{
                 <h1>Loading</h1>
             )
         }else{
-            console.log("state details: ", details);
             const orderList = details.items.map((item,index)=>{
                 return (
                     <OrderItem key={item.id} {...item} />

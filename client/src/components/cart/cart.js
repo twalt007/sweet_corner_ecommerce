@@ -25,7 +25,6 @@ class Cart extends Component{
     }
 
     render(){
-        console.log("Cart Items:", this.props.cartItems)
         let cartList = null;
 
         if (this.props.cartItems.items){
