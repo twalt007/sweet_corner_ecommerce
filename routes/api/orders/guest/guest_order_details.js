@@ -19,16 +19,17 @@ module.exports = async (req, res, next) => {
             return;
         }
         
-        const [[ordersQuery]] = await db.execute(`
+        const [[ordersEmail]] = await db.execute(`
         SELECT email, cartId FROM orders WHERE pid=?
         `, [order_id]);
 
-        console.log("email: ", ordersQuery.email);
+        console.log("email: ", ordersEmail.email);
 
-        // if (email === orderEmail){
-        //     const [[ results ]] = await db.query(`
-        //     SELECT `)
-        // }
+        if (email === ordersEmail.email){
+            const [[ results ]] = await db.query(`
+            SELECT * FROM orders WHERE pid = ?`, [order_id]);
+            res.send(results);
+        }
 
         // itemCount --> from cartItems "Select Sum(quantity) as itemCount where cardId = ?"
         // total --> getCartTotals (cartId) 
@@ -54,7 +55,7 @@ module.exports = async (req, res, next) => {
 
 
 
-        res.send("I work");
+        
 
     }catch(error){
         console.log("error", error);
