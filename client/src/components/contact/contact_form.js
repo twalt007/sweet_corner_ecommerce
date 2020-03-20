@@ -6,7 +6,6 @@ import '../general/form/form.scss'
 
 class ContactForm extends Component {
     handleFormSubmit(formValues){
-        console.log('On submit contact form values', formValues);
         this.props.reset();
     }
 

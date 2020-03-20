@@ -3,28 +3,60 @@ const db = require('../../../../db');
 module.exports = async (req, res, next) => {
     
     try{
-        const {order_id, email} = req.params;
+        const {order_id} = req.params;
+        const {email} = req.query;
+
         console.log("order_id: ", order_id, "email: ", email);
-        
-        if(!order_id || isNaN(order_id)){
+
+        if(!order_id){
             const error = new ApiError(422, "Invalid order id sent")
             next(error);
             return;
         }
         if(!email){
-            const error = new ApiError(422, "Invalid email sent")
+            const error = new ApiError(400, "Invalid email sent")
             next(error);
             return;
         }
         
-        console.log('order_id: ', order_id);
-
-        const [ orderEmail ] = await db.query(`
-        SELECT email FROM orders WHERE pid = ?
+        const [[ordersEmail]] = await db.execute(`
+        SELECT email, cartId FROM orders WHERE pid=?
         `, [order_id]);
-        console.log("email: ", orderEmail);
 
-        res.send("I work");
+        console.log("email: ", ordersEmail.email);
+
+        if (email === ordersEmail.email){
+            const [[ results ]] = await db.query(`
+            SELECT * FROM orders WHERE pid = ?`, [order_id]);
+            res.send(results);
+        }
+
+        // itemCount --> from cartItems "Select Sum(quantity) as itemCount where cardId = ?"
+        // total --> getCartTotals (cartId) 
+        // createdAt --> from orders
+        // id --> order id/Pid   from orders
+        // status --> fromo orders
+        // items --> [    reference add_items_to_cart
+        //     {
+        //         each: from products where productID taken from 
+        //         quantity: from ci where cartID
+        //         total:
+        //         id:
+        //         product:{
+        //             name:
+        //             id:
+        //             thumbnail: {
+        //                 altTect:
+        //                 url:
+        //             }
+        //         }
+        //     }
+        // ]
+
+
+
+        
+
     }catch(error){
         console.log("error", error);
         next(error); 
