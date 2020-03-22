@@ -1,4 +1,5 @@
 const db = require('../../../../db');
+const { getCartTotals } = require('../../../../helpers/index')
 
 module.exports = async (req, res, next) => {
     
@@ -23,28 +24,31 @@ module.exports = async (req, res, next) => {
         SELECT email, cartId FROM orders WHERE pid=?
         `, [order_id]);
 
-        console.log("email: ", ordersEmail.email);
+        console.log("email: ", ordersEmail.email, "id: ", ordersEmail.cartId);
 
         if (email === ordersEmail.email){
-            const [[ results ]] = await db.query(`
-            SELECT ci.productID, ci.quantity, o.createdAt, p.description, p.cost, i.file
+            const total = await getCartTotals(ordersEmail.cartId);
+            const [[ cart ]] = await db.query(`
+            SELECT o.createdAt, o.pid AS id, os.name AS status 
             FROM orders AS o 
-            JOIN cartItems AS ci
-            ON ci.cartId = o.cartID
-            JOIN products AS p
-            ON p.id = ci.productId
-            JOIN images AS i
-            ON i.productId = p.id
+            JOIN orderStatuses AS os ON o.statusId
             WHERE o.pid=?`, [order_id]);
-            res.send(results);
-        }
+            
+            const [cartData] = await db.execute(`
+            SELECT p.cost AS \`each\`, ci.quantity, (cost*quantity) AS total,  FROM cartItems AS ci 
+            JOIN products AS p ON p.id = ci.productId
+            JOIN images AS i ON i.productId = p.id
+            WHERE ci.id=?`, [ordersEmail.cartId]);
 
-        // itemCount --> from cartItems "Select Sum(quantity) as itemCount where cardId = ?"
-        // total --> getCartTotals (cartId) 
-        // createdAt --> from orders
-        // id --> order id/Pid   from orders
-        // status --> fromo orders
-        // items --> [    reference add_items_to_cart
+            const output = {
+                itemCount: total.items,
+                total: total.cost,
+                ...cart,
+                cartData
+            }
+            
+            res.send(output);
+        }
         //     {
         //         each: from products where productID taken from 
         //         quantity: from ci where cartID
@@ -76,3 +80,17 @@ module.exports = async (req, res, next) => {
     //check that email aligns with the order id nummber
     //return tuff
 }
+
+
+
+ // const [[ results ]] = await db.query(`
+            // SELECT ci.productID, ci.quantity, o.createdAt, p.description, p.cost, i.file
+            // FROM orders AS o 
+            // JOIN cartItems AS ci
+            // ON ci.cartId = o.cartID
+            // JOIN products AS p
+            // ON p.id = ci.productId
+            // JOIN images AS i
+            // ON i.productId = p.id
+            // WHERE o.pid=?`, [order_id]);
+            // res.send(results);
