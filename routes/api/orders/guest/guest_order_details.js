@@ -27,7 +27,15 @@ module.exports = async (req, res, next) => {
 
         if (email === ordersEmail.email){
             const [[ results ]] = await db.query(`
-            SELECT * FROM orders WHERE pid = ?`, [order_id]);
+            SELECT ci.productID, ci.quantity, o.createdAt, p.description, p.cost, i.file
+            FROM orders AS o 
+            JOIN cartItems AS ci
+            ON ci.cartId = o.cartID
+            JOIN products AS p
+            ON p.id = ci.productId
+            JOIN images AS i
+            ON i.productId = p.id
+            WHERE o.pid=?`, [order_id]);
             res.send(results);
         }
 
