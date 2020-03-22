@@ -38,20 +38,24 @@ module.exports = async (req, res, next) => {
             WHERE o.pid=?`, [order_id]);
             
             const [cartData] = await db.execute(`
-            SELECT p.cost AS \`each\`, ci.quantity, (cost*quantity) AS total, ci.pid AS id, p.name, p.pid AS productId, i.altText, i.type, i.file FROM cartItems AS ci 
+            SELECT p.cost AS \`each\`, ci.quantity, (cost*quantity) AS total, ci.pid AS id, p.name AS name, p.pid AS productId, i.altText, i.type, i.file FROM cartItems AS ci 
             JOIN products AS p ON p.id = ci.productId
             JOIN images AS i ON i.productId = p.id
             WHERE ci.cartId=? AND i.type="thumbnail"`, [creds.cartId]);
 
             const items = cartData.map( item => {
-                const {productId, altText, file, type, ...p} = item;
+                const {productId, altText, file, type, name, ...p} = item;
                 return {
                     ...p,
-                    id: productId,
-                    thumbnail: {
-                        altText,
-                        url: buildUrl(req, type, file)
+                    product:{
+                        name,
+                        id: productId,
+                        thumbnail: {
+                            altText,
+                            url: buildUrl(req, type, file)
+                        }
                     }
+                    
                 }
             })
 

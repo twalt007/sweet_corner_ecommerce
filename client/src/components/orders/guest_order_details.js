@@ -44,7 +44,7 @@ class GuestOrderDetails extends Component{
                 <h1>Loading</h1>
             )
         }else{
-            const orderList = details.items.map((item,index)=>{
+            const orderList = details.items.map((item, index)=>{
                 return (
                     <OrderItem key={item.id} {...item} />
                 );
@@ -66,7 +66,7 @@ class GuestOrderDetails extends Component{
                         <tbody className="table-body">
                             {orderList}
                             <tr className="grand-total">
-                                <td colspan="2"></td>
+                                <td colSpan="2"></td>
                                 <td className="summary">Order Totals: </td>
                                 <td className="total-quantity">{details.itemCount}</td>
                                 <td className="total-cost"><Money cost={details.total} /></td>
@@ -88,6 +88,3 @@ export default connect(mapStateToProps,{
     getGuestOrderDetails:getGuestOrderDetails,
 })(GuestOrderDetails);
 
-{/* <div className="grand-total">
-                        {this.props.cartItems.total ? this.totals() : ""}
-                    </div> */}
