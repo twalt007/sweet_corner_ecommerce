@@ -4,7 +4,7 @@ import Money from '../general/money';
 
 
 const orderItem = (props)=> {
-    const {name,thumbnail} = props.product;
+    const {name, thumbnail} = props.product;
     const {total, each, quantity} = props;
     return (
             <tr className="product-row">
