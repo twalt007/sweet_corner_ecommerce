@@ -10,8 +10,4 @@ export default {
 };
 
 
-//get_cart_totals
-//get acctive CLEAR_PRODCUT_DETAILS
-//create guest order
-//get guest order details
 

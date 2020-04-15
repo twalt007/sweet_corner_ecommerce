@@ -24,5 +24,3 @@ app.use(defaultErrorHandler);
 app.listen(PORT, ()=>{
     console.log('server is running at @ localhost:' + PORT);
 });
-
-
