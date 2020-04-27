@@ -67,7 +67,7 @@ This project was coded in a dev environment configured with the assistance of Le
  2. The project will start at **localhost:3000**, and should render a page with the logo and menu depicted in the image above, along with the home page text. 
 
 ### 5. Build For Deployment
-1. To deploy, run webpack in the client direcoty to build project
+1. To deploy, run webpack in the client directory to build project. From the command line type:
     - `npm --prefix client run build`
 
 ## Credits
