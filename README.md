@@ -59,7 +59,7 @@ This project was coded in a dev environment configured with the assistance of Le
     - In the **config** folder create the below files. (Reference template files 'db.json.template' and 'cart_jwt.json.template')
         - db.json
         - cart_jwt.json        
-    - You will need to generate a secure token for use as the secret in cart_jwt.json. [Seure Password Generator Website](https://passwordsgenerator.net/ "Secure Password Generator Website") is a useful resource.  For optimum security and code combatability, using a password at least 25 characters long and excluding ambiguous characters is recommended.
+    - You will need to generate a secure token for use as the secret in cart_jwt.json. [Secure Password Generator Website](https://passwordsgenerator.net/ "Secure Password Generator Website") is a useful resource.  For optimum security and code combatability, using a password at least 25 characters long and excluding ambiguous characters is recommended.
 
 ### 4. Run the Code!
  1. `npm run dev` will run the full site, **both client and server**.
