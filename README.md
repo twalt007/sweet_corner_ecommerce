@@ -1,21 +1,3 @@
-### Setup Instructions
-
-
-
-
-
-### setup
-clone repo
-npm init??
-npm install
-webpack?
-webpack-dev-server?
-
-config file?
-git ignore
-
-
-
 # Sweet Corner Ecommerce Site
 ![Products Page Example Screenshot](sweet_corner.jpg?raw=true "Sweet Corner Products Page")
 ### <a href="http://sweet-corner.twalt007.com/">VIEW SITE</a> 
@@ -41,10 +23,9 @@ Server **CRUD** abilities built in **Node.js** using **Express** for efficient r
 + MySQL
 + jwt-simple
 
-## Clone and Code
+## Clone and Code (Set-up)
 ### 1. System Requirements
 This project requires that the latest versions of Node.js and MySql be installed on your machine.
-
 #### Dev Environment
 This project was coded in a dev environment configured with the assistance of LearningFuze Coding School.  If desired, the below link contains instructions for duplicating this environment. 
 [Sample Dev Environment](https://github.com/twalt007/lfz-dev "LearningFuze Coding School - Dev Environment")
