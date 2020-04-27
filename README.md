@@ -34,6 +34,7 @@ Server **CRUD** abilities built in **Node.js** using **Express** for efficient r
 This project requires that the latest versions of Node.js and MySql be installed on your machine.
 #### Dev Environment
 This project was coded in a dev environment configured with the assistance of LearningFuze Coding School.  If desired, the below link contains instructions for duplicating this environment. 
+
 [Sample Dev Environment](https://github.com/twalt007/lfz-dev "LearningFuze Coding School - Dev Environment")
 
 ### 2. Fork and Install Dependencies
@@ -51,14 +52,14 @@ This project was coded in a dev environment configured with the assistance of Le
     - To start, into your commander type:       
         - `sudo service apache2 start` 
         - `sudo service mysql start` 
-    - Go to [phpMyAdmin Login Link](http://localhost/phpmyadmin/ "PhpMyAdmin Login Page")
+    - Go to [phpMyAdmin Login Page](http://localhost/phpmyadmin/ "PhpMyAdmin Login Page")
     - From sweet_corner_ecommerce repo, get database data from 'db' --> 'sql' --> *'db_dump'* file.
     - Import into database
 2. Create Config Files for database
     - In the **config** folder create the below files. (Reference template files 'db.json.template' and 'cart_jwt.json.template')
         - db.json
         - cart_jwt.json        
-    - You will need to generate a secure token for use as the secret in cart_jwt.json. [Password Generator Website](https://passwordsgenerator.net/ "Secure Password Generator Website") is a useful resource.  For optimum security and code combatability, using a password at least 25 characters long and excluding ambiguous characters is recommended.
+    - You will need to generate a secure token for use as the secret in cart_jwt.json. [Seure Password Generator Website](https://passwordsgenerator.net/ "Secure Password Generator Website") is a useful resource.  For optimum security and code combatability, using a password at least 25 characters long and excluding ambiguous characters is recommended.
 
 ### 4. Run the Code!
  1. `npm run dev` will run the full site, **both client and server**.
