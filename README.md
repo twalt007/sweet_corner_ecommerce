@@ -9,9 +9,9 @@
 ## Description
 This is a **Full-stack e-commerce site** where users browse and add products to a personal cart for checkout. 
 
-Client built in **React JS**. Used **Redux** for **state management**, building own **thunk Middleware** for API calls; forms built with **Redux-forms**. Data validated with **Regex**. Styled with css and **Bootstrap** for grid-layout of products. 
+Client built in **React JS**. Used **Redux** for **state management**, building own **thunk Middleware** for API calls; forms built with **Redux-forms**. Data validated with **Regex**. Styled with **CSS** and **Bootstrap** for grid-layout of products. 
 
-Server **CRUD** abilities built in **Node.js** using **Express** for efficient routing. Database built with MySQL; data validated with **placeholders** and **'execute'** used to prevent SQL injections. Tracked carts with **jwt-simple encrypted tokens**. 
+Server **CRUD** abilities built in **Node.js** using **Express** for efficient routing. Database built with **MySQL**; data validated with **placeholders** and **'execute'** used to prevent SQL injections. Tracked carts with **jwt-simple encrypted tokens**. 
 
 **U-Auth and email form features still in development.*
 
