@@ -35,7 +35,7 @@ This project requires that the latest versions of Node.js and MySql be installed
 #### Dev Environment
 This project was coded in a dev environment configured with the assistance of LearningFuze Coding School.  If desired, the below link contains instructions for duplicating this environment. 
 
-[Sample Dev Environment](https://github.com/twalt007/lfz-dev "LearningFuze Coding School - Dev Environment")
+[Sample Dev Environment - Set-up Instructions](https://github.com/twalt007/lfz-dev "LearningFuze Coding School - Dev Environment Set-Up")
 
 ### 2. Fork and Install Dependencies
 1. Fork this repository by clicking the "Fork" button at top right.
