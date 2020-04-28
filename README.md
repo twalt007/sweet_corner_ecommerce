@@ -9,9 +9,9 @@
 ## Description
 This is a **Full-stack e-commerce site** where users browse and add products to a personal cart for checkout. 
 
-Client built in **React JS**. Used **Redux** for **state management**, building own **thunk Middleware** for API calls; forms built with **Redux-forms**. Data validated with **Regex**. Styled with css and **Bootstrap** for grid-layout of products. 
+Client built in **React JS**. Used **Redux** for **state management**, building own **thunk Middleware** for API calls; forms built with **Redux-forms**. Data validated with **Regex**. Styled with **CSS** and **Bootstrap** for grid-layout of products. 
 
-Server **CRUD** abilities built in **Node.js** using **Express** for efficient routing. Database built with MySQL; data validated with **placeholders** and **'execute'** used to prevent SQL injections. Tracked carts with **jwt-simple encrypted tokens**. 
+Server **CRUD** abilities built in **Node.js** using **Express** for efficient routing. Database built with **MySQL**; data validated with **placeholders** and **'execute'** used to prevent SQL injections. Tracked carts and check-out sessions with **jwt-simple encrypted tokens**. 
 
 **U-Auth and email form features still in development.*
 
@@ -33,9 +33,9 @@ Server **CRUD** abilities built in **Node.js** using **Express** for efficient r
 ### 1. System Requirements
 This project requires that the latest versions of Node.js and MySql be installed on your machine.
 #### Dev Environment
-This project was coded in a dev environment configured with the assistance of LearningFuze Coding School.  If desired, the below link contains instructions for duplicating this environment. 
+This project was coded in a dev environment configured with the assistance of LearningFuze Coding School.  If desired, the below link contains instructions for duplicating this environment. Repo cloned from their official github.
 
-[Sample Dev Environment](https://github.com/twalt007/lfz-dev "LearningFuze Coding School - Dev Environment")
+[Sample Dev Environment - Set-up Instructions](https://github.com/twalt007/lfz-dev "LearningFuze Coding School - Dev Environment Set-Up")
 
 ### 2. Fork and Install Dependencies
 1. Fork this repository by clicking the "Fork" button at top right.
@@ -59,7 +59,7 @@ This project was coded in a dev environment configured with the assistance of Le
     - In the **config** folder create the below files. (Reference template files 'db.json.template' and 'cart_jwt.json.template')
         - db.json
         - cart_jwt.json        
-    - You will need to generate a secure token for use as the secret in cart_jwt.json. [Seure Password Generator Website](https://passwordsgenerator.net/ "Secure Password Generator Website") is a useful resource.  For optimum security and code combatability, using a password at least 25 characters long and excluding ambiguous characters is recommended.
+    - You will need to generate a secure token for use as the secret in cart_jwt.json. [Secure Password Generator Website](https://passwordsgenerator.net/ "Secure Password Generator Website") is a useful resource.  For optimum security and code combatability, using a password at least 25 characters long and excluding ambiguous characters is recommended.
 
 ### 4. Run the Code!
  1. `npm run dev` will run the full site, **both client and server**.
