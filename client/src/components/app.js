@@ -18,7 +18,6 @@ const App = () => (
     <div className="app">
         <div className="container">
             <Header />
-            {/* { isFetching && <LoadingComponent />}    high z index for component */}
             <Route path="/about" component={About}/>
             <Route path="/products" exact component={Products}/>
             <Route path="/contact" component={Contact}/>

@@ -59,8 +59,6 @@ module.exports = async (req, res, next) => {
                 }
             })
 
-            console.log("items: ", items, "cardData: ", cartData);
-
             orderInfo = {
                 itemCount: total.items,
                 total: total.cost,

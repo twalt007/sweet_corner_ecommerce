@@ -38,11 +38,6 @@ module.exports = async (req,res, next) => {
         res.send(output);
     } catch (error){
         console.log("error", error);
-        next(error);
-        // if(error instanceof ApiError){
-        //     res.status(error.status).send(error.message);
-        // }else{
-        //     res.status(500).send('Internal server error');
-        // }        
+        next(error);        
     }
 }

@@ -19,7 +19,7 @@ class Schedule extends Component {
                 schedule: resp.data.schedule
             });
         }).catch((err=>{
-            console.log(err);
+            console.log("Error retrieving schedule data: ", err);
         }));
     }
     render(){

@@ -2,8 +2,6 @@ const router = require('express').Router();
 const fs = require('fs');
 const path = require('path');
 
-//Routers   /images/:type/:file
-
 router.get('/:type/:file',(req, res) => {
     const {type, file} = req.params;
 
