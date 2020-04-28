@@ -11,7 +11,7 @@ This is a **Full-stack e-commerce site** where users browse and add products to 
 
 Client built in **React JS**. Used **Redux** for **state management**, building own **thunk Middleware** for API calls; forms built with **Redux-forms**. Data validated with **Regex**. Styled with **CSS** and **Bootstrap** for grid-layout of products. 
 
-Server **CRUD** abilities built in **Node.js** using **Express** for efficient routing. Database built with **MySQL**; data validated with **placeholders** and **'execute'** used to prevent SQL injections. Tracked carts with **jwt-simple encrypted tokens**. 
+Server **CRUD** abilities built in **Node.js** using **Express** for efficient routing. Database built with **MySQL**; data validated with **placeholders** and **'execute'** used to prevent SQL injections. Tracked carts and check-out sessions with **jwt-simple encrypted tokens**. 
 
 **U-Auth and email form features still in development.*
 
@@ -33,7 +33,7 @@ Server **CRUD** abilities built in **Node.js** using **Express** for efficient r
 ### 1. System Requirements
 This project requires that the latest versions of Node.js and MySql be installed on your machine.
 #### Dev Environment
-This project was coded in a dev environment configured with the assistance of LearningFuze Coding School.  If desired, the below link contains instructions for duplicating this environment. 
+This project was coded in a dev environment configured with the assistance of LearningFuze Coding School.  If desired, the below link contains instructions for duplicating this environment. Repo cloned from their official github.
 
 [Sample Dev Environment - Set-up Instructions](https://github.com/twalt007/lfz-dev "LearningFuze Coding School - Dev Environment Set-Up")
 
