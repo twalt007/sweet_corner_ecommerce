@@ -73,6 +73,6 @@ This project was coded in a dev environment configured with the assistance of Le
 
 ## Credits
 ### LearningFuze Coding Camp Dev Environment
-[Sample Dev Environment](https://github.com/twalt007/lfz-dev "LearningFuze Coding School - Dev Environment")
+[Sample Dev Environment Configuration Guide](https://github.com/twalt007/lfz-dev "LearningFuze Coding School - Dev Environment")
 
 ## Have a *Sweet* Time with the Code!

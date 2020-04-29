@@ -3,11 +3,7 @@ import axios from "axios";
 
 export const getAllProducts = () => async dispatch => {
     try{
-        // dispatch({type: types.IS_FETCHING})
-        const resp = await axios.get('/api/products');
-        // if(resp){
-        //     dispatch({type: types.DONE_FETCHING})
-        // }
+        const resp = await axios.get('/api/products');        
         dispatch({
             type: types.GET_ALL_PRODUCTS,
             products: resp.data.products

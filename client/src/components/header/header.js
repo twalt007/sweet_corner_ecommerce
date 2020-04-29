@@ -5,11 +5,6 @@ import header from '../../assets/images/images/header.png';
 import Nav from '../nav';
 import centerLogo from '../../assets/images/images/logo.png';
 
-// const imageStyle =  {
-//     backgroundImage:`url(${header})`,
-//     backgroundRepeat: 'no-repeat',
-//     height:100
-// }
 
 const Header = props =>{
     return (
