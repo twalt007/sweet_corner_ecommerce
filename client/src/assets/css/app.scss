@@ -1,6 +1,14 @@
+$breakpoint-three-quarters: 990px;
+$breakpoint-halfscreen: 767px;
+$breakpoint-phone: 414px;
+
 @font-face{
     font-family: allura;
     src: url('../../assets/fonts/Allura-Regular.ttf');
+}
+
+html{
+    font-size: 100%; 
 }
 .app {
     font-family: sans-serif;
@@ -8,8 +16,10 @@
     position: relative;
     width:1000px;
     margin: 0 auto 0;
-    font-size: 100%;
-
+    .slogan, .tagline{
+        font-family: allura;
+        font-size: 2rem;
+    }
     .container {
         font-size: 1em;
         text-align: center; 
@@ -17,5 +27,23 @@
     }
     .text{
         margin: 1rem 0;
+    }
+}
+
+@media(max-width: $breakpoint-three-quarters){
+    html{
+        font-size: 80%,
+    }
+}
+
+@media (max-width: $breakpoint-halfscreen){
+    html{
+        font-size: 75%,
+    }
+}
+
+@media (max-width: $breakpoint-phone){
+    html{
+        font-size: 65%,
     }
 }

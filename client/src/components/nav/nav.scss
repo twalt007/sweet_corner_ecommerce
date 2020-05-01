@@ -1,4 +1,8 @@
-.main-nav{
+$breakpoint-three-quarters: 990px;
+$breakpoint-halfscreen: 767px;
+$breakpoint-phone: 414px;
+
+.nav{
     position: absolute;
     right: 0;
     margin: 2px;
@@ -22,17 +26,30 @@
         }
         a:hover{
             color:orange;
-        }
-        
-
+        }   
     }
 }
 
+.dropdown{
+    display: none;
+}
+// .material-icons{
 
-// Link:hover{
-    //     color: orange;
-    // }
-    // Link:visited{
-    //     text-decoration: none;
-    //     color: initial;
-    // }
+// }
+
+@media(max-width: $breakpoint-three-quarters){
+  
+}
+
+// @media (max-width: $breakpoint-halfscreen){
+//     .standard-menu{
+//         display: none;
+//     }
+//     .dropdown{
+//         display: inline-block;
+//     }
+// }
+
+// @media (max-width: $breakpoint-phone){
+
+// }
