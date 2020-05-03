@@ -4,27 +4,11 @@ $bkgrd-extra: 850px;
 $bkpt-S: 768px;
 $bkpt-XS: 480px;
 
-@media only screen and (min-width: $bkpt-L){
-    .top-image-Xlrg{
-        display: block;
-        height: 80px;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        margin: 0 auto;
-    }
-    .top-image-lrg{
-        display: none;
-    }
-    .top-image{
-        display: none;
-    }
-}
-
 
 ///default set for 1200>screen>992px
 .header-container{
-    border-bottom: 24px solid #754b23;
+    margin: 0 8%;
+    border-bottom: 15px solid #754b23;
     text-align: center;
 }
 .top-image-Xlrg{
@@ -46,13 +30,32 @@ $bkpt-XS: 480px;
     height: 8rem;
 }
 .slogan{
-    line-height: 3rem;
+    // line-height: 3rem;
     font-weight: 500;
     text-align: center;
 }    
 
+@media only screen and (min-width: $bkpt-L){
+    .top-image-Xlrg{
+        display: block;
+        height: 80px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        margin: 0 auto;
+    }
+    .top-image-lrg{
+        display: none;
+    }
+    .top-image{
+        display: none;
+    }
+}
 
 @media (max-width: $bkgrd-extra){
+    .header-container{
+        border-bottom: 12px solid #754b23;
+    }
     .top-image-Xlrg{
         display: none;
     }
@@ -70,6 +73,10 @@ $bkpt-XS: 480px;
 }
 
 @media (max-width: $bkpt-S){
+    .header-container{
+        border-bottom: 10px solid #754b23;
+        margin: 0 6%;
+    }
     .top-image-Xlrg{
         display: none;
     }
@@ -87,6 +94,10 @@ $bkpt-XS: 480px;
 }
 
 @media (max-width: $bkpt-XS){
+    .header-container{
+        border-bottom: 7px solid #754b23;
+        margin: 0 4%;
+    }
     .top-image-Xlrg{
         display: none;
     }
@@ -100,6 +111,10 @@ $bkpt-XS: 480px;
         background-size: contain;
         background-position: center;
         margin: 0 auto;
+    }
+    .center-logo{
+        margin-top: 2.5%;
+        height: 7rem;
     }
 }
 

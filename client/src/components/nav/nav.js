@@ -8,8 +8,8 @@ export default props => {
         <div className="nav">
             <div className="dropdown">
                 <i className="material-icons">menu</i>
-                <div className="dropdown-cntnt">
-                    <ul className="main-nav">
+                <div className="dropdown-ctnt">
+                    <ul className="nav2">
                         <li>
                             <Link to="/">Home</Link>
                         </li>

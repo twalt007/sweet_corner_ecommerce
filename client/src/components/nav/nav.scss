@@ -20,24 +20,22 @@ $bkpt-XS: 480px;
         text-transform: uppercase;
         color: #754b23;
         text-shadow: 2px 2px 5px darkgray;
-        cursor: pointer;
-        
-        a, a:visited{
-            text-decoration: none;
-            color: #754b23
-        }
-        a:hover{
-            color:orange;
-        }   
+        cursor: pointer;  
     }
+    a, a:visited{
+        text-decoration: none;
+        color: #754b23
+    }
+    a:hover{
+        color:orange;
+    } 
 }
-
 .dropdown{
     display: none;
 }
-// .material-icons{
-
-// }
+.material-icons:hover{
+        cursor: pointer;  
+}
 
 @media only screen and (min-width : $bkpt-L){
     .nav{
@@ -49,22 +47,62 @@ $bkpt-XS: 480px;
     }    
 }
 
-// @media (max-width: $bkpt-S){
-//     .standard-menu{
-//         display: none;
-//     }
-//     .dropdown{
-//         display: inline-block;
-//     }
-//     .nav{
-//         margin: 4px;
-//         li{
-//             margin: 0px 16px 0px 16px;
-//             font-size: 0.9rem;                
-//         }
-//     }
-// }
+@media (max-width: $bkpt-S){
+    // .nav{
+    //     margin: 4px;
+    //     li{
+    //         margin: 0px 16px 0px 16px;
+    //         font-size: 0.9rem;                
+    //     }
+    // }
+    .standard-menu{
+        display: none;
+    }
+    .dropdown{
+        display: inline-block;
+        position: fixed;
+        right: 5px;
+        top: 7px;
+        z-index: 50;
+        cursor: pointer;
+
+        .dropdown-ctnt{
+            display: none;
+            // position: absolute;
+            // right: 0px;
+            // min-width: 37vw;
+            // margin-top: 2px;
+        }
+    }
+    
+    .dropdown-ctnt:hover{
+        display: block;
+        // .nav2 li{
+        //     display: block;
+        //     position: relative;
+        //     margin: 0px 16px 0px 16px;
+        //     right: 10px;
+        //     // padding: 3px;
+        //     text-align: center;
+        //     font-size: .9rem;
+        //     text-transform: uppercase;
+        //     font-family: sans-serif;
+        //     background-color: rgb(247, 247, 213);
+        // }
+    }
+        .nav2 a, .nav2 a:link, nav2 a:visited{
+        color: #754b23;
+        text-shadow: 1px 1px 3px darkgrey;
+        text-decoration: none;
+    }
+    .nav2 li:hover, .nav2 a:hover{
+        background: #06b4af;
+        color: white;
+    }
+    
+}
 
 // @media (max-width: $bkpt-XS){
 
 // }
+

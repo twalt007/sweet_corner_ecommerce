@@ -2,6 +2,7 @@ $bkpt-L: 1200px;
 $bkpt-M: 992px;
 $bkpt-S: 768px;
 $bkpt-XS: 480px;
+$bkpt-XXS: 366px;
 
 @font-face{
     font-family: allura;
@@ -60,7 +61,13 @@ html{
         font-size: 65%,
     }
 }
-$bkpt-L: 1200px;
-$bkpt-M: 992px;
-$bkpt-S: 768px;
-$bkpt-XS: 480px;
+@media (max-width: $bkpt-XS){
+    html{
+        font-size: 63%,
+    }
+    .app{
+        .tagline{
+            font-size: 1.76rem;
+        }
+    }    
+}
