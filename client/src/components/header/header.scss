@@ -1,17 +1,49 @@
-$breakpoint-three-quarters: 990px;
-$breakpoint-halfscreen: 767px;
-$breakpoint-phone: 414px;
+$bkpt-L: 1200px;
+$bkpt-M: 992px;
+$bkgrd-extra: 850px;
+$bkpt-S: 768px;
+$bkpt-XS: 480px;
 
+@media only screen and (min-width: $bkpt-L){
+    .top-image-Xlrg{
+        display: block;
+        height: 80px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        margin: 0 auto;
+    }
+    .top-image-lrg{
+        display: none;
+    }
+    .top-image{
+        display: none;
+    }
+}
+
+
+///default set for 1200>screen>992px
 .header-container{
     border-bottom: 24px solid #754b23;
+    text-align: center;
 }
-.top-image{
-    height: 100px;
+.top-image-Xlrg{
+    display: block;
+    height: 75px;
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: center;
+    margin: 0 auto;
+}
+.top-image-lrg{
+    display: none;
+}
+.top-image{
+    display: none;
 }
 .center-logo{
     margin-top: 4%;
+    height: 8rem;
 }
 .slogan{
     line-height: 3rem;
@@ -19,27 +51,59 @@ $breakpoint-phone: 414px;
     text-align: center;
 }    
 
-@media(max-width: $breakpoint-three-quarters){
 
+@media (max-width: $bkgrd-extra){
+    .top-image-Xlrg{
+        display: none;
+    }
+    .top-image-lrg{
+        display: block;
+        height: 65px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        margin: 0 auto;
+    }
     .top-image{
-        height: 80px;
+        display: none;
     }
 }
 
-@media (max-width: $breakpoint-halfscreen){
-   .top-image{
-       height: 75px;
-   }
+@media (max-width: $bkpt-S){
+    .top-image-Xlrg{
+        display: none;
+    }
+    .top-image-lrg{
+        display: none;
+    }
+    .top-image{
+        display: block;
+        height: 65px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        margin: 0 auto;
+    }
 }
 
-@media (max-width: $breakpoint-phone){
+@media (max-width: $bkpt-XS){
+    .top-image-Xlrg{
+        display: none;
+    }
+    .top-image-lrg{
+        display: none;
+    }
     .top-image{
-        height: 50px
+        display: block;
+        height: 50px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        margin: 0 auto;
     }
 }
 
 
-///want to find next media break point and set my small breakpoint to taht before puttingit everywhere
 // want to figureout how to get my screeen witdth to reduce and not stay at 1,000
 // need to get image on home to srink with screen width
 // want to figure out container/row/column, why the orange bars are disappearing
