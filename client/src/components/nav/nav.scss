@@ -1,4 +1,10 @@
-.main-nav{
+$bkpt-L: 1200px;
+$bkpt-M: 992px;
+$bkpt-S: 768px;
+$bkpt-XS: 480px;
+
+///default set for 1200>screen>992px
+.nav{
     position: absolute;
     right: 0;
     margin: 2px;
@@ -9,11 +15,11 @@
     li{
         display: inline-block;
         margin: 0px 12px 0px 12px;
-        font-size: 1rem;
+        font-size: 0.8rem;
         text-align: center;
         text-transform: uppercase;
         color: #754b23;
-        text-shadow: 1px 1px 3px darkgray;
+        text-shadow: 2px 2px 5px darkgray;
         cursor: pointer;
         
         a, a:visited{
@@ -22,17 +28,43 @@
         }
         a:hover{
             color:orange;
-        }
-        
-
+        }   
     }
 }
 
+.dropdown{
+    display: none;
+}
+// .material-icons{
 
-// Link:hover{
-    //     color: orange;
-    // }
-    // Link:visited{
-    //     text-decoration: none;
-    //     color: initial;
-    // }
+// }
+
+@media only screen and (min-width : $bkpt-L){
+    .nav{
+        margin: 4px;
+        li{
+            margin: 0px 16px 0px 16px;
+            font-size: 0.9rem;                
+        }
+    }    
+}
+
+// @media (max-width: $bkpt-S){
+//     .standard-menu{
+//         display: none;
+//     }
+//     .dropdown{
+//         display: inline-block;
+//     }
+//     .nav{
+//         margin: 4px;
+//         li{
+//             margin: 0px 16px 0px 16px;
+//             font-size: 0.9rem;                
+//         }
+//     }
+// }
+
+// @media (max-width: $bkpt-XS){
+
+// }

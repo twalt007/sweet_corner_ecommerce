@@ -1,6 +1,6 @@
 import React from "react";
 import './home.scss';
-import {Col, Row} from 'react-bootstrap';
+import {Container, Col, Row} from 'react-bootstrap';
 import strips from '../../assets/images/images/strips2.png';
 import dots from '../../assets/images/images/dots-box2.png';
 import bottomCupcakes from '../../assets/images/images/cupcakes.png'
@@ -8,6 +8,7 @@ import bottomCupcakes from '../../assets/images/images/cupcakes.png'
 export default props =>{
     return (
         <div className="home-container">
+            <Container>
             <Row>
                 <Col md={7}>
                     <div>
@@ -25,9 +26,12 @@ export default props =>{
                     <img className="dots" src={dots} />
                     <div className="strips" style={{backgroundImage:`url(${strips})`}} />
                 </Col>
+            </Row>
+            <Row>
                 <div className="tagline">Please note you will be overwhelmed by the sweet content</div>
                 <img className="btmCupCakes" src={bottomCupcakes} />
             </Row>
+            </Container>
         </div>
     )
 }

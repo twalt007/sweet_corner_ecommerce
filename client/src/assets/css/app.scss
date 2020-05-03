@@ -1,21 +1,66 @@
+$bkpt-L: 1200px;
+$bkpt-M: 992px;
+$bkpt-S: 768px;
+$bkpt-XS: 480px;
+
 @font-face{
     font-family: allura;
     src: url('../../assets/fonts/Allura-Regular.ttf');
+}
+
+///default set for 1200>screen>992px
+html{
+    font-size: 100%; 
 }
 .app {
     font-family: sans-serif;
     color: #754b23;
     position: relative;
-    width:1000px;
     margin: 0 auto 0;
-    font-size: 100%;
-
-    .container {
-        font-size: 1em;
-        text-align: center; 
-        padding: 0;   
+    font-size: 1em;
+    .slogan, .tagline{
+        font-family: allura;
+        font-size: 1.68rem;
     }
     .text{
         margin: 1rem 0;
     }
 }
+
+@media only screen and (min-width : $bkpt-L){
+    html{
+        font-size: 1.08em,
+    }
+    .app{
+        max-width: 1225px
+    }
+    .slogan, .tagline{
+        font-family: allura;
+        font-size: 2.08rem;
+    }
+    .text{
+        margin: 1.08rem 0;
+    }
+}
+
+@media(max-width: $bkpt-M){
+    html{
+        font-size: 80%,
+    }
+}
+
+@media (max-width: $bkpt-S){
+    html{
+        font-size: 75%,
+    }
+}
+
+@media (max-width: $bkpt-XS){
+    html{
+        font-size: 65%,
+    }
+}
+$bkpt-L: 1200px;
+$bkpt-M: 992px;
+$bkpt-S: 768px;
+$bkpt-XS: 480px;

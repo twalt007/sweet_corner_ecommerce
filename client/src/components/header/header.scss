@@ -1,18 +1,117 @@
-.header-container{
-    border-bottom: 24px solid #754b23;
-    .top-image{
-        height: 100px;
+$bkpt-L: 1200px;
+$bkpt-M: 992px;
+$bkgrd-extra: 850px;
+$bkpt-S: 768px;
+$bkpt-XS: 480px;
+
+@media only screen and (min-width: $bkpt-L){
+    .top-image-Xlrg{
+        display: block;
+        height: 80px;
         background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        margin: 0 auto;
     }
-    .center-logo{
-        margin-top: 4%;
+    .top-image-lrg{
+        display: none;
     }
-    .slogan{
-        font-family: allura;
-        font-size: 1.5rem;
-        line-height: 3rem;
-        font-weight: 500;
-        text-align: center;
+    .top-image{
+        display: none;
     }
 }
 
+
+///default set for 1200>screen>992px
+.header-container{
+    border-bottom: 24px solid #754b23;
+    text-align: center;
+}
+.top-image-Xlrg{
+    display: block;
+    height: 75px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin: 0 auto;
+}
+.top-image-lrg{
+    display: none;
+}
+.top-image{
+    display: none;
+}
+.center-logo{
+    margin-top: 4%;
+    height: 8rem;
+}
+.slogan{
+    line-height: 3rem;
+    font-weight: 500;
+    text-align: center;
+}    
+
+
+@media (max-width: $bkgrd-extra){
+    .top-image-Xlrg{
+        display: none;
+    }
+    .top-image-lrg{
+        display: block;
+        height: 65px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        margin: 0 auto;
+    }
+    .top-image{
+        display: none;
+    }
+}
+
+@media (max-width: $bkpt-S){
+    .top-image-Xlrg{
+        display: none;
+    }
+    .top-image-lrg{
+        display: none;
+    }
+    .top-image{
+        display: block;
+        height: 65px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: $bkpt-XS){
+    .top-image-Xlrg{
+        display: none;
+    }
+    .top-image-lrg{
+        display: none;
+    }
+    .top-image{
+        display: block;
+        height: 50px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        margin: 0 auto;
+    }
+}
+
+
+// want to figureout how to get my screeen witdth to reduce and not stay at 1,000
+// need to get image on home to srink with screen width
+// want to figure out container/row/column, why the orange bars are disappearing
+//get header basically working (ignore nave, only have nave side menu appear, but get dropdown funcationality afterwards
+//get cupcake image to resize
+//at half-screen is where i want to use nav drppdow
+// get home page working right
+// get footer basically working right
+// get nav and drop down
+// roll out to other content pages
+// roll out to products and ordering pages

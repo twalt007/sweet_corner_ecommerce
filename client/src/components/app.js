@@ -13,11 +13,14 @@ import ProductDetails from './products/product_details';
 import Cart from './cart';
 import GuestCheckout from './checkout';
 import GuestOrderDetails from './orders/guest_order_details'
+import {Container} from 'react-bootstrap';
+
 
 const App = () => (
     <div className="app">
-        <div className="container">
+        <Container fluid >
             <Header />
+            
             <Route path="/about" component={About}/>
             <Route path="/products" exact component={Products}/>
             <Route path="/contact" component={Contact}/>
@@ -29,7 +32,7 @@ const App = () => (
             <Route path="/orders/guest/:order_id" component={GuestOrderDetails} />
 
             <Footer />
-        </div>
+        </Container>
     </div>
 );
 
