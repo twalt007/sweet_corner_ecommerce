@@ -1,17 +1,15 @@
 $bkpt-L: 1200px;
 $bkpt-M: 992px;
-$bkpt-S: 768px;
+$bkpt-S: 767px;
 $bkpt-XS: 480px;
 
 ///default set for 1200>screen>992px
 .nav{
     position: absolute;
-    right: 0;
-    margin: 2px;
+    right: 8%;
     padding: 0;
     font-size: 0;
     font-family: serif;
-
     li{
         display: inline-block;
         margin: 0px 12px 0px 12px;
@@ -20,34 +18,96 @@ $bkpt-XS: 480px;
         text-transform: uppercase;
         color: #754b23;
         text-shadow: 2px 2px 5px darkgray;
-        cursor: pointer;
-        
-        a, a:visited{
-            text-decoration: none;
-            color: #754b23
-        }
-        a:hover{
-            color:orange;
-        }   
+        cursor: pointer;  
+    }
+    a, a:visited{
+        text-decoration: none;
+        color: #754b23
+    }
+    a:hover{
+        color:orange;
+    }
+    .cart-widget .material-icons{
+        position: relative;
+        top: -2px;
+    }
+    .cart-item-count{
+        position: relative;
+        bottom: 8px;
     }
 }
-
 .dropdown{
     display: none;
 }
-// .material-icons{
-
-// }
+.material-icons:hover{
+    cursor: pointer; 
+}
 
 @media only screen and (min-width : $bkpt-L){
-    .nav{
-        margin: 4px;
-        li{
+    .nav li{
             margin: 0px 16px 0px 16px;
-            font-size: 0.9rem;                
-        }
-    }    
+            font-size: 0.9rem;     
+        }   
 }
+
+@media (max-width: $bkpt-M){
+    .nav{
+        margin-top: 3px;
+    }
+    .nav li{
+        margin: 0px 12px 0px 12px;
+        font-size: 0.9rem;                
+    }
+}
+
+@media (max-width: $bkpt-S){
+    .standard-menu{
+        display: none;
+    }
+    .cart-widget >*{
+        position: relative;
+        right: 25px;
+        top: 5px;
+    }   
+    .dropdown{
+        display: inline-block;
+        position: absolute;
+        right: 8%;
+        top: 5px;
+        z-index: 35;
+    }
+    .dropdownctnt{
+        display: none;
+        position: absolute;
+        right: -20px;
+        min-width: 140px;
+        // margin-top: 50px;
+    }
+    .dropdown:hover .dropdownctnt {
+        display: block;
+    }
+    .nav2 li{
+        display: block;
+        position: relative;
+        text-align: center;
+        font-size: .90rem;
+        text-transform: uppercase;
+        font-family: sans-serif;
+        background-color: rgb(247, 247, 213);
+    }
+    .nav2 a, .nav2 a:link, .nav2 a:visited{
+        color: #754b23;
+        text-shadow: 1px 1px 3px darkgrey;
+        text-decoration: none;
+    }
+    .nav2 li:hover, .nav2 a:hover{
+        background: #06b4af;
+        color: white;
+    }
+    
+}
+
+
 
 // @media (max-width: $bkpt-S){
 //     .standard-menu{
@@ -55,16 +115,55 @@ $bkpt-XS: 480px;
 //     }
 //     .dropdown{
 //         display: inline-block;
+//         position: absolute;
+//         right: 8%;
 //     }
-//     .nav{
-//         margin: 4px;
-//         li{
-//             margin: 0px 16px 0px 16px;
-//             font-size: 0.9rem;                
+//     // .dropdown-ctnt{
+//     //     display: none;
+//     //     position: fixed;
+//     // }
+//     .dropdown:hover .dropdown-ctnt{
+//         .dropdown-ctnt{
+//             display: block;
 //         }
+//         .nav2 li{
+//             display: block;
+//             // position: absolute;
+//             // margin: 0px 16px 0px 16px;
+//             // right: 50px;
+//             // // padding: 3px;
+//             // text-align: center;
+//             // font-size: .9rem;
+//             // text-transform: uppercase;
+//             // font-family: sans-serif;
+//             // background-color: rgb(247, 247, 213);
+//         }
+//     }        
+//     .cart-widget{
+//         position: relative;
+//         right: 50px;
+//         top: 5px;
 //     }
 // }
+   
+ 
 
-// @media (max-width: $bkpt-XS){
 
-// }
+
+ // .dropdown-ctnt{
+    //     display: none;
+    //     // position: absolute;
+    //     // right: 0px;
+    //     // min-width: 37vw;
+    //     // margin-top: 2px;
+    // }   
+    // }
+    //     .nav2 a, .nav2 a:link, nav2 a:visited{
+    //     color: #754b23;
+    //     text-shadow: 1px 1px 3px darkgrey;
+    //     text-decoration: none;
+    // }
+    // .nav2 li:hover, .nav2 a:hover{
+    //     background: #06b4af;
+    //     color: white;
+    // }
