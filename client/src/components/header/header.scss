@@ -1,7 +1,8 @@
 $bkpt-L: 1200px;
 $bkpt-M: 992px;
-$bkgrd-extra: 850px;
-$bkpt-S: 768px;
+$bkpt-extra: 850px;
+$bkpt-S: 767px;
+$bkpt-S-extra: 670px;
 $bkpt-XS: 480px;
 
 
@@ -13,10 +14,10 @@ $bkpt-XS: 480px;
 }
 .top-image-Xlrg{
     display: block;
-    height: 75px;
+    height: 60px;
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: center;
+    background-position: center top;
     margin: 0 auto;
 }
 .top-image-lrg{
@@ -38,37 +39,37 @@ $bkpt-XS: 480px;
 @media only screen and (min-width: $bkpt-L){
     .top-image-Xlrg{
         display: block;
-        height: 80px;
+        height: 70px;
         background-repeat: no-repeat;
         background-size: contain;
-        background-position: center;
+        background-position: center top;
         margin: 0 auto;
     }
-    .top-image-lrg{
-        display: none;
-    }
-    .top-image{
-        display: none;
-    }
 }
-
-@media (max-width: $bkgrd-extra){
+@media (max-width: $bkpt-M){
     .header-container{
         border-bottom: 12px solid #754b23;
     }
+    .top-image-Xlrg{
+        display: block;
+        height: 55px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center top;
+        margin: 0 auto;
+    }
+}
+@media (max-width: $bkpt-extra){
     .top-image-Xlrg{
         display: none;
     }
     .top-image-lrg{
         display: block;
-        height: 65px;
+        height: 55px;
         background-repeat: no-repeat;
         background-size: contain;
-        background-position: center;
+        background-position: center top;
         margin: 0 auto;
-    }
-    .top-image{
-        display: none;
     }
 }
 
@@ -77,46 +78,76 @@ $bkpt-XS: 480px;
         border-bottom: 10px solid #754b23;
         margin: 0 6%;
     }
-    .top-image-Xlrg{
-        display: none;
+    .top-image-lrg{
+        display: block;
+        height: 50px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center top;
+        margin: 0 auto;
+    }
+    .center-logo{
+        margin-top: 1.8%;
+    }
+}
+@media (max-width: $bkpt-S-extra){
+    .header-container{
+        border-bottom: 10px solid #754b23;
+        margin: 0 6%;
     }
     .top-image-lrg{
         display: none;
     }
     .top-image{
         display: block;
-        height: 65px;
+        height: 48px;
         background-repeat: no-repeat;
         background-size: contain;
-        background-position: center;
+        background-position: center top;
         margin: 0 auto;
     }
+    .center-logo{
+        margin-top: 1.8%;
+    }
 }
-
 @media (max-width: $bkpt-XS){
     .header-container{
         border-bottom: 7px solid #754b23;
         margin: 0 4%;
     }
-    .top-image-Xlrg{
-        display: none;
-    }
-    .top-image-lrg{
-        display: none;
-    }
     .top-image{
-        display: block;
-        height: 50px;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        margin: 0 auto;
+        height: 32px;
     }
     .center-logo{
-        margin-top: 2.5%;
+        margin-top: 1.8%;
         height: 7rem;
     }
 }
+
+// @media (max-width: $bkpt-XS){
+//     .header-container{
+//         border-bottom: 7px solid #754b23;
+//         margin: 0 4%;
+//     }
+//     .top-image-Xlrg{
+//         display: none;
+//     }
+//     .top-image-lrg{
+//         display: none;
+//     }
+//     .top-image{
+//         display: block;
+//         height: 32px;
+//         background-repeat: no-repeat;
+//         background-size: contain;
+//         background-position: center top;
+//         margin: 0 auto;
+//     }
+//     .center-logo{
+//         margin-top: 1.8%;
+//         height: 7rem;
+//     }
+// }
 
 
 // want to figureout how to get my screeen witdth to reduce and not stay at 1,000

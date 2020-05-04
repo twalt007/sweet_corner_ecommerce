@@ -7,8 +7,8 @@ export default props => {
     return (
         <div className="nav">
             <div className="dropdown">
-                <i className="material-icons">menu</i>
-                <div className="dropdown-ctnt">
+                <i className="material-icons dpdn-menu">menu</i>
+                <div className="dropdownctnt">
                     <ul className="nav2">
                         <li>
                             <Link to="/">Home</Link>
@@ -27,7 +27,6 @@ export default props => {
                         </li>
                     </ul>
                 </div>
-                <CartWidget/>
             </div>
             <div className="standard-menu">
                 <ul className="main-nav">
@@ -46,9 +45,9 @@ export default props => {
                     <li>
                         <Link to="/contact">Contact</Link>
                     </li>
-                    <CartWidget/>
                 </ul>
             </div>
+            <CartWidget/>
         </div>
     );
 }
