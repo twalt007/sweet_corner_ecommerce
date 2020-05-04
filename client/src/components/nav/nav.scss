@@ -69,14 +69,6 @@ $bkpt-XS: 480px;
         right: 25px;
         top: 5px;
     }   
-
-    // .cart-widget{
-    //     display: inline-block;
-    //     z-index: 50;
-    //     position: absolute;
-    //     right: 50%;
-    //     top: 3px;
-    // }
     .dropdown{
         display: inline-block;
         position: absolute;
@@ -87,9 +79,9 @@ $bkpt-XS: 480px;
     .dropdownctnt{
         display: none;
         position: absolute;
-        right: -10px;
-        min-width: 37vw;
-        margin-top: 50px;
+        right: -20px;
+        min-width: 140px;
+        // margin-top: 50px;
     }
     .dropdown:hover .dropdownctnt {
         display: block;
@@ -97,8 +89,6 @@ $bkpt-XS: 480px;
     .nav2 li{
         display: block;
         position: relative;
-        right: 10px;
-        padding: 3px;
         text-align: center;
         font-size: .90rem;
         text-transform: uppercase;
