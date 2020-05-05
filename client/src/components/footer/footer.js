@@ -10,13 +10,13 @@ export default props =>{
     return (
         <footer className="footer-container">
             <Row className="row">
-                <Col md={4}>
+                <Col className="decDots-col">
                     <img className="decDots" src={footerDots} />
                 </Col>
-                <Col md={4}>
+                <Col xs={6}className="copyright-col">
                     <div className="copyright">Copyright &copy; {year} Sweet Corner. All rights reserved.</div>
                 </Col>
-                <Col md={4}>
+                <Col className="phone-col">
                     <div className="phone"><FontAwesomeIcon icon={faPhone} /> 800 264 2099</div>
                 </Col>
             </Row>    
