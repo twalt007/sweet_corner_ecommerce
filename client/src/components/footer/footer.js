@@ -10,10 +10,10 @@ export default props =>{
     return (
         <footer className="footer-container">
             <Row className="row">
-                <Col className="decDots-col">
+                <Col xs={3} className="decDots-col">
                     <img className="decDots" src={footerDots} />
                 </Col>
-                <Col xs={6}className="copyright-col">
+                <Col xs={5} sm={6} className="copyright-col">
                     <div className="copyright">Copyright &copy; {year} Sweet Corner. All rights reserved.</div>
                 </Col>
                 <Col className="phone-col">

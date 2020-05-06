@@ -18,7 +18,6 @@ import {Container} from 'react-bootstrap';
 
 const App = () => (
     <div className="app">
-        <Container fluid >
             <Header />
             
             <Route path="/about" component={About}/>
@@ -32,7 +31,6 @@ const App = () => (
             <Route path="/orders/guest/:order_id" component={GuestOrderDetails} />
 
             <Footer />
-        </Container>
     </div>
 );
 
