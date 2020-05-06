@@ -25,11 +25,11 @@ export default props =>{
                 <Col md={2} className="decoration">
                     <div className="strips" style={{backgroundImage:`url(${strips})`}} />
                 </Col>
-                <div className="center-text">
-                    <div className="tagline">Please note you will be overwhelmed by the sweet content</div>
-                </div>
-                <img className="frosting" src={frosting} />
             </Row>
+            <div className="center-text">
+                <div className="tagline">Please note you will be overwhelmed by the sweet content</div>
+            </div>
+            <img className="frosting" src={frosting} />
         </div>
     )
 }
