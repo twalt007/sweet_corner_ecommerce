@@ -1,17 +1,33 @@
+$bkpt-extra: 1100px;
+$bkpt-M: 992px;
+$bkpt-S: 767px;
+$bkpt-XS: 480px;
+
 .about-container{
-    div{
-        font-size: 0.95rem;
-        text-align: justify;
+    .container-fluid{
+        padding-right: 0;
+        margin: 0px;
     }
     .text{
-        padding-left: 22px;
+        font-size: 0.95rem;
+        text-align: justify;
     }
     h4{
         margin-top:1rem;
     }
+    .content-col{
+        padding-right: 0;
+    }
+    .dots-col{
+        padding: 0;
+    }
+    .strips-col{
+        padding-left: 0;
+    }
     .strips{
         height:100%;
-        background-size:contain;
+        background-size: contain;
+        padding-left: 0;
     }
     .dots{
         position: absolute;
@@ -19,6 +35,32 @@
         left: 30%;
     }
     .frosting{
-        margin: auto;
+       max-width: 100%
+    }
+    .tagline{
+        text-align: center;
+    }
+}
+
+@media (min-width: $bkpt-extra){
+    .dots{
+        height: 40%
+    }
+}
+@media (min-width: $bkpt-M){
+    .dots{
+        height: 33%
+    }
+}
+@media (min-width: $bkpt-S){
+    .dots{
+        height: 27%
+    }
+}
+@media (max-width: $bkpt-S){
+    .about-container{
+        .content-col{
+            padding-right: 6%;
+        }
     }
 }
