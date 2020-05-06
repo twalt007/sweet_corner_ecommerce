@@ -1,16 +1,22 @@
+$bkpt-S: 768px;
+$bkpt-extra: 575px;
+
 .home-container{
-    div{
-        text-align: justify;
+    .container-fluid{
+        padding-right: 0;
+        margin: 0px;
     }
     .text{
-        padding-left: 22px;
+        text-align: justify;
     }
     h4{
         margin-top:1rem;
     }
     .strips{
         height:100%;
-        background-size:contain;
+        background-size: contain;
+        padding-left: 0;
+
     }
     .dots{
         position: absolute;
@@ -18,7 +24,23 @@
         right: 10%
     }
     .btmCupCakes{
-        margin: auto;
         max-width: 100%
+    }
+    .tagline{
+        text-align: center;
+    }
+}
+
+@media (max-width: $bkpt-S){
+    // .stripes-col{
+    //     padding-left: 0;
+    // }
+    .dots{
+        width: 40%;
+    }
+}
+@media (max-width: $bkpt-extra){
+    .dots{
+        display: none;
     }
 }

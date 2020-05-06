@@ -17,7 +17,7 @@ html{
     font-family: sans-serif;
     color: #754b23;
     position: relative;
-    margin: 0 auto 0;
+    margin: 0 8%;
     font-size: 1em;
     .slogan, .tagline{
         font-family: allura;
@@ -25,6 +25,9 @@ html{
     }
     .text{
         margin: 1rem 0;
+    }
+    .center{
+        text-align: center;
     }
 }
 
@@ -54,14 +57,20 @@ html{
     html{
         font-size: 75%,
     }
+    .app{
+        margin: 0 6%;
+    }
 }
 
 @media (max-width: $bkpt-XS){
     html{
         font-size: 65%,
     }
+    .app{
+        margin: 0 4%;
+    }
 }
-@media (max-width: $bkpt-XS){
+@media (max-width: $bkpt-XXS){
     html{
         font-size: 63%,
     }

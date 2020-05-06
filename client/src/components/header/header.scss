@@ -8,7 +8,7 @@ $bkpt-XS: 480px;
 
 ///default set for 1200>screen>992px
 .header-container{
-    margin: 0 8%;
+    // margin: 0 8%;
     border-bottom: 15px solid #754b23;
     text-align: center;
 }
@@ -76,7 +76,7 @@ $bkpt-XS: 480px;
 @media (max-width: $bkpt-S){
     .header-container{
         border-bottom: 10px solid #754b23;
-        margin: 0 6%;
+        // margin: 0 6%;
     }
     .top-image-lrg{
         display: block;
@@ -93,7 +93,6 @@ $bkpt-XS: 480px;
 @media (max-width: $bkpt-S-extra){
     .header-container{
         border-bottom: 10px solid #754b23;
-        margin: 0 6%;
     }
     .top-image-lrg{
         display: none;
@@ -113,7 +112,7 @@ $bkpt-XS: 480px;
 @media (max-width: $bkpt-XS){
     .header-container{
         border-bottom: 7px solid #754b23;
-        margin: 0 4%;
+        // margin: 0 4%;
     }
     .top-image{
         height: 32px;
@@ -124,40 +123,3 @@ $bkpt-XS: 480px;
     }
 }
 
-// @media (max-width: $bkpt-XS){
-//     .header-container{
-//         border-bottom: 7px solid #754b23;
-//         margin: 0 4%;
-//     }
-//     .top-image-Xlrg{
-//         display: none;
-//     }
-//     .top-image-lrg{
-//         display: none;
-//     }
-//     .top-image{
-//         display: block;
-//         height: 32px;
-//         background-repeat: no-repeat;
-//         background-size: contain;
-//         background-position: center top;
-//         margin: 0 auto;
-//     }
-//     .center-logo{
-//         margin-top: 1.8%;
-//         height: 7rem;
-//     }
-// }
-
-
-// want to figureout how to get my screeen witdth to reduce and not stay at 1,000
-// need to get image on home to srink with screen width
-// want to figure out container/row/column, why the orange bars are disappearing
-//get header basically working (ignore nave, only have nave side menu appear, but get dropdown funcationality afterwards
-//get cupcake image to resize
-//at half-screen is where i want to use nav drppdow
-// get home page working right
-// get footer basically working right
-// get nav and drop down
-// roll out to other content pages
-// roll out to products and ordering pages
