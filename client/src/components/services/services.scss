@@ -1,25 +1,61 @@
+$bkpt-M: 992px;
+$bkpt-S: 767px;
+$bkpt-XS: 480px;
+
 .services-container{
-    div{
-        text-align: justify;
+    .container-fluid{
+        padding-right: 0;
+        margin: 0px;
     }
     .text{
-        padding-left: 22px;
+        font-size: 0.95rem;
+        text-align: justify
     }
     .h4{
-        margin-top:0rem;
-        margin-bottom:1rem;
+        margin-top:1rem;
+    }
+    .content-col{
+        padding-right: 0;
+    }
+    .dots-col{
+        padding: 0;
+    }
+    .strips-col{
+        padding-left: 0;
     }
     .strips{
         height:100%;
         background-size:contain;
+        padding-left: 0;
     }
     .dots{
         position: absolute;
         top: 20%;
         left: 30%;
+        height: 17%
+    }
+    .tagline{
+        text-align: center;
     }
     .cake{
-        margin: auto;
+        text-align: center;
     }
 }
 
+@media (min-width: $bkpt-M){
+    .dots{
+        height: 15%
+    }
+}
+@media (min-width: $bkpt-S){
+    .dots{
+        height: 5%
+    }
+}
+@media (max-width: $bkpt-S){
+    .about-container{
+        .content-col{
+            padding-right: 6%;
+        }
+    }
+}
