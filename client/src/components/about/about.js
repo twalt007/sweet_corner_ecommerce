@@ -12,7 +12,7 @@ export default props =>{
                 <Row className="row">
                     <Col md={7} sm={7} className="content-col">
                         <div>
-                            <h4 className="h4 text">Delicious cupcakes, magical moments!</h4>
+                            <h4 className="h4">Delicious cupcakes, magical moments!</h4>
                             <div className="text">Sweet Corner is growing fast. Our delicious cupcakes of all sizes, shapes and colors and tastes are creating a real wow factor.</div>
                             <div className="text">Our delicious cupcakes are different from other bakeries. Why? Well, not only are our cupcakes and baked goods prepared fresh every day, we also create personalized cupcakes in any size and shape just for you! Simply delicious and unique.</div>
                             <div className="text">Our expert bakers create stunning cupcakes in any flavor, color, size or shape you choose.</div>
@@ -20,10 +20,10 @@ export default props =>{
                             <div className="text">No idea is too creative for our bakers at Sweet Corner cupcakes. Contact us today to discuss you special cupcake.</div>
                         </div>
                     </Col>
-                    <Col sm={3} md={3} className="dots-col">
+                    <Col xs={3} sm={3} md={3} className="dots-col">
                         <img className="dots" src={dots} />
                     </Col>
-                    <Col sm={2} md={2} className="strips-col">
+                    <Col xs={2} sm={2} md={2} className="strips-col">
                         <div className="strips" style={{backgroundImage:`url(${strips})`}} />
                     </Col>
                 </Row>

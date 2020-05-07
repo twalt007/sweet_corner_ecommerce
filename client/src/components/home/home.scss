@@ -7,6 +7,7 @@ $bkpt-extra: 575px;
         margin: 0px;
     }
     .text{
+        font-size: 0.95rem;
         text-align: justify;
     }
     h4{
@@ -31,15 +32,16 @@ $bkpt-extra: 575px;
 }
 
 @media (max-width: $bkpt-S){
-    // .stripes-col{
-    //     padding-left: 0;
-    // }
-    .dots{
-        width: 40%;
+    .home-container{
+        .dots{
+            width: 40%;
+        }
     }
 }
 @media (max-width: $bkpt-extra){
-    .dots{
-        display: none;
+    .home-container{
+        .dots{
+            display: none
+        }
     }
 }
