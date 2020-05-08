@@ -1,6 +1,10 @@
+$bkpt-M: 992px;
+$bkpt-extra: 800px;
+$bkpt-XS: 480px;
+
 .contactFormContainer{
     *{
-        width: 310px;
+        width: 100%;
         color: #754b23;
         margin: 5px 0;
         border: none;
@@ -34,4 +38,16 @@
         padding: 3px;
     }
     
+}
+@media (max-width: $bkpt-M){
+    .contactFormContainer{
+        *{
+            width: 100%;
+        }
+        .form-actions{
+            button{
+                width: 50%;
+            }
+        }
+    }
 }

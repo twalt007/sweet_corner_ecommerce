@@ -1,9 +1,18 @@
+$bkpt-M: 992px;
+$bkpt-extra: 800px;
+$bkpt-XS: 480px;
+
 .contact-container{
-    margin: 0 auto;
-    text-align: justify;
-    position: relative;
-    .textBody, .schedule{
-        padding-left: 90px;
+    .container-fluid{
+        padding-right: 0;
+        margin: 0;
+    }
+    .text{
+        font-size: 0.95rem;
+        text-align: justify
+    }
+    .h4{
+        margin-top:1rem;
     }
     a, a:visited{
         text-decoration: none;
@@ -11,6 +20,9 @@
     }
     h4{
         margin-top:1rem;
+    }
+    .schedule-col{
+        padding: 0px;
     }
     .upDots{
         position: absolute;
@@ -21,5 +33,22 @@
         position: absolute;
         top: 20%;
         left: 20%
+    }
+}
+@media (max-width: $bkpt-M){
+    .contact-container{
+        .upDots{
+            display: none;
+        }
+        .downDots{
+            height: 40%;
+        }
+    }
+}
+@media (max-width: $bkpt-XS){
+    .contact-container{
+        .downDots{
+            display: none;
+        }
     }
 }
