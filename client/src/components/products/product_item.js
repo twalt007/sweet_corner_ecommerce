@@ -6,9 +6,9 @@ import {Col} from 'react-bootstrap';
 const productItem = (props)=> {
     const {caption, cost, name, thumbnail} = props;
     return (
-        <Col md={4} sm={6} className="product-item" onClick={props.goToDetails}>
+        <Col lg={3} md={4} sm={6} xs={12} className="product-item" onClick={props.goToDetails}>
             <div className="border">
-                <h4 className="name">{name}</h4>
+                <h5 className="name">{name}</h5>
                 <img className="image" src={thumbnail['url']} alt={thumbnail['altText']} />
                 <div className="caption">{caption}</div>
                 <Money className="cost" cost = {cost}/>
