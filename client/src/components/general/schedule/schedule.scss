@@ -1,3 +1,6 @@
+$bkpt-extra: 600px;
+$bkpt-XS: 480px;
+
 .schedule-container{
     *{
         color: #754b23;
@@ -13,16 +16,50 @@
     td{
         text-align: center;
         padding: 0;
-        padding-top: 4px;
+        padding-top: 9px;
         margin: 3px;
         background-color:#f6ede6;
     }
     .day{
         height: 35px;
         width: 152px;
+        vertical-align: center;
     }
     .time{
         height: 35px;
         width: 218px;
+        vertical-align: center;
+    }
+}
+@media (max-width: $bkpt-extra){
+    .schedule-container{
+        margin: auto;
+        td{
+            padding: 0;
+        }
+        .day{
+            height: 75%;
+            width: 30%
+        };
+        .time{
+            height: 75%;
+            width: 58%
+        }
+    }
+}
+@media (max-width: $bkpt-XS){
+    .schedule-container{
+        margin: auto;
+        td{
+            padding: 0;
+        }
+        .day{
+            height: 24%;
+            width: 30%
+        };
+        .time{
+            height: 24%;
+            width: 58%
+        }
     }
 }

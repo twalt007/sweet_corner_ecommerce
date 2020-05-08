@@ -9,8 +9,6 @@ class ContactForm extends Component {
         this.props.reset();
     }
 
-
-
     render(){
         const {handleSubmit} = this.props;
         return (
