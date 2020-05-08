@@ -28,7 +28,7 @@ class Products extends Component{
         });
         return(
             <div className="products-container">
-                <h1 className="title">Our Products</h1>
+                <h3 className="title">Our Products</h3>
                 <Row className="list">
                     {productList}
                 </Row>                
