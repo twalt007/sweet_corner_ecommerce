@@ -49,7 +49,8 @@ class Cart extends Component{
                             <th></th>
                             <th>Product</th>
                             <th>Price</th>
-                            <th>Quantity</th>
+                            <th className="qtyFull">Quantity</th>
+                            <th className="qtyShrink">Qty</th>
                             <th>Total</th>
                         </tr>
                     </thead>

@@ -43,13 +43,17 @@ $bkpt-XS: 480px;
 }
 
 @media (min-width: $bkpt-M){
-    .dots{
-        height: 15%
+    .services-container{
+        .dots{
+            height: 15%
+        }
     }
 }
 @media (min-width: $bkpt-S){
-    .dots{
-        height: 5%
+    .services-container{
+        .dots{
+            height: 5%
+        }
     }
 }
 @media (max-width: $bkpt-S){

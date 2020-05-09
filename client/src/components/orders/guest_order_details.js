@@ -23,15 +23,15 @@ class GuestOrderDetails extends Component{
         return (
             <div className="top-half">
                 <div className="header">
-                    <h1><span className = "blue">Guest </span>Order Details</h1>
-                    <h1>Status:<span className="yellow">{status}</span></h1>
-                    <h3 className="order-num">Order #: <span className="orange">{id}</span></h3>
+                    <h4><span className = "blue">Guest </span>Order Details</h4>
+                    <h4>Status:<span className="yellow">{status}</span></h4>
+                    <h5 className="order-num">Order #: <span className="orange">{id}</span></h5>
                 </div>
                 <div className="overview">
-                    <h5 className="time"><span className="bold">Order Placed: </span>{this.formatTime(createdAt)}</h5>
-                    <h5 className="top-total-quantity"><span className="bold">Order Total Items: </span>{itemCount}</h5>
-                    <h5 className="top-total-quantity"><span className="bold">Order Total Cost: </span><Money className="money" cost={total} /></h5>
-                    <h3 className="table-title bold">Order Items:</h3>
+                    <h6 className="time"><span className="bold">Order Placed: </span>{this.formatTime(createdAt)}</h6>
+                    <h6 className="top-total-quantity"><span className="bold">Order Total Items: </span>{itemCount}</h6>
+                    <h6 className="top-total-quantity"><span className="bold">Order Total Cost: </span><Money className="money" cost={total} /></h6>
+                    <h5 className="table-title bold">Order Items:</h5>
                 </div>
             </div>
         )
@@ -59,7 +59,8 @@ class GuestOrderDetails extends Component{
                                 <th></th>
                                 <th>Product</th>
                                 <th>Price</th>
-                                <th>Quantity</th>
+                                <th className="qtyFull">Quantity</th>
+                                <th className="qtyShrink">Qty</th>
                                 <th>Total</th>
                             </tr>
                         </thead>
