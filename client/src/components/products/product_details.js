@@ -51,15 +51,15 @@ class ProductDetails extends Component{
             return(
                 <div className="details-container">
                     <Row>
-                        <Col md={5} sm={12}>
+                        <Col md={5} sm={5} xs={12} className="image-col">
                             <img className="image" src={details.image.url}/>
                         </Col>
-                        <Col md={7} sm={12}>
+                        <Col md={7} sm={7} xs={12}>
                             <div className="content">
                                 <div className="detail-content">
-                                    <h1 className="product-title">{details.name}</h1>
+                                    <h4 className="product-title">{details.name}</h4>
                                     <div className="tagline">{details.caption}</div>
-                                    <h4>Description</h4>
+                                    <h5>Description</h5>
                                     <div>{details.description}</div>
                                     <Money cost={details.cost}/>
                                 </div>
