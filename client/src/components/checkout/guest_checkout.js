@@ -53,7 +53,7 @@ function validate(formValues){
     }else if (lastName.length <2) {
         errors.lastName = 'Last name must be at least 2 charcters long.';
     }else if (!nameRegex.test(lastName)){
-        errors.lastName = 'Please enter a valid last name. NAme may be only one word long and may not include spaces.';
+        errors.lastName = 'Please enter a valid last name. Name may be only one word long and may not include spaces.';
     }
 
     if (!email){

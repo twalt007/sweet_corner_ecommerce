@@ -1,3 +1,5 @@
+$bkpt-XS: 480px;
+
 .guest-order-container{
     color:  #754b23;
     .blue{
@@ -24,14 +26,44 @@
     table>*{
         color: #754b23
     }
+    .table-head{
+        .qtyShrink{
+            display: none;
+        }
+    }
     .grand-total {
         .cost{
             display: inline-block;
         } 
         .summary, .total-quantity, .cost{
-            font-size: 1.5rem;
+            font-size: 1.2rem;
+            font-weight: 600;
         }
     }
-    
+    img{
+        max-width: 20vw;
+    }
 
+}
+
+@media (max-width: $bkpt-XS){
+    .guest-order-container{
+        .table-head{
+            font-size: 1rem;
+            font-weight: 600;
+            .qtyShrink{
+                display: inline-block;
+            }
+            .qtyFull{
+                display: none;
+            }
+        }
+        .grand-total { 
+            .summary, .total-quantity, .cost{
+                font-size: 1.1rem;
+            }
+        }
+        
+    
+    }
 }
