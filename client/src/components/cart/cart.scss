@@ -1,3 +1,6 @@
+$bkpt-XS-extra: 580px;
+$bkpt-XS: 480px;
+
 .cart-container{
     margin-bottom: 50px;
     .table-head{
@@ -23,10 +26,37 @@
         font-weight: 600;
         color: white;
         font-size: 1.5rem;
-        padding: 10px;    
+        padding: 10px; 
+        border-radius: 5px;   
     }
     .guest-checkout:hover, .guest-checkout:visited{
         text-decoration: none;
         color:white;
+    }
+    img{
+        max-width: 20vw;
+    }
+}
+@media( max-width: $bkpt-XS-extra){
+    .cart-container{
+        .grand-total{
+            font-size: 1.7rem;
+        }
+    }
+}
+@media(max-width: $bkpt-XS){
+    .cart-container{
+        .table-head{
+            font-size: 1rem;
+        }
+        .table-body{
+            font-size: 0.8rem;
+        }    
+        .grand-total{ 
+            font-size: 1.4rem;     
+        }    
+        .guest-checkout{
+            font-size: 1.3rem;  
+        }
     }
 }
