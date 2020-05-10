@@ -1,18 +1,24 @@
+$bkpt-S: 768px;
+$bkpt-XXS-extra: 400px;
+
 .guest-checkout-container{
     *{
-        width: 310px;
         color: #754b23;
-        margin: 7px auto;
+        margin: 5px auto;
         border: none;
         position: relative;
+        text-align: center;
+        max-width: 310px;
     }
-    h2{
+    h4{
         font-weight: 600;
         margin-top: 30px;
         margin-bottom: 40px;
     }
     .input{
-        height: 40px;
+        height: 30px;
+        min-width: 310px;
+        text-align: left;
     }
     .input-field:nth-of-type(3n+1) input{
         background-color: #e86b35;
@@ -23,18 +29,70 @@
     .input-field:nth-child(3n+3) input{
         background-color: #06b4af;
     }
+    .button{
+        text-align: right;
+    }
     button{
         background-color: #e86b35;
         width: 170px;
         color: white;
-        font-size: 1.5rem;
+        font-size: 1rem;
+        padding: 6px;
         font-weight: 500;
         margin-top: 30px;
         margin-bottom: 50px;
+        border-radius: 5px;
     }
     .input::placeholder{
         padding: 4px;
-        font-size: 1rem;
+        font-size: .8rem;
+    }
+    .submit-shrink{
+        display: none;
+    }
+    .submit-full{
+        display: inline-block;
     }
     
+}
+@media(max-width: $bkpt-S){
+    .guest-checkout-container{
+        *{
+            max-width: 250px
+        }
+        .input{
+            height: 25px;
+            min-width: 250px
+        }
+        button{
+            margin-top: 20px;
+            width: 40%;
+            padding: 6px
+        }
+    }
+}
+@media(max-width: $bkpt-XXS-extra){
+    .guest-checkout-container{
+        *{
+            max-width: 170px;
+        }
+        h4{
+            font-weight: 600;
+            margin-top: 17px;
+            margin-bottom: 17px;
+        }
+        .input{
+            min-width: 170px
+        }
+        button{
+            margin-top: 20px;
+            width: 30%
+        }
+        .submit-shrink{
+            display: inline-block;
+        }
+        .submit-full{
+            display: none;
+        }
+    }
 }

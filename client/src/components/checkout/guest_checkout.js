@@ -21,13 +21,14 @@ class GuestCheckout extends Component{
         console.log("this.props guest checout, looking for handleSubmit function: ", this.props)
         return (            
             <div className="guest-checkout-container">
-                <h2>Guest Checkout</h2>
+                <h4>Guest Checkout</h4>
                 <form className="form" onSubmit={handleSubmit(this.handleGuestCheckout.bind(this))}>
                     <Field className="firstName" placeholder="First Name" name="firstName" component={Input}/>
                     <Field className="lastName" placeholder="Last Name" name="lastName" component={Input}/>
                     <Field className="email" placeholder="Email" name="email" type="email" component={Input}/>
                     <div className="button">
-                        <button type="submit">Submit Order </button>
+                        <button type="submit" className="submit-full">Submit Order </button>
+                        <button type="submit" className="submit-shrink">Submit </button>
                     </div>
                 </form>
             </div>
