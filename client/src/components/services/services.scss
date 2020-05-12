@@ -42,20 +42,14 @@ $bkpt-XS: 480px;
     }
 }
 
-@media (min-width: $bkpt-M){
+@media (max-width: $bkpt-M){
     .services-container{
         .dots{
             height: 15%
         }
     }
 }
-@media (min-width: $bkpt-S){
-    .services-container{
-        .dots{
-            height: 5%
-        }
-    }
-}
+
 @media (max-width: $bkpt-S){
     .about-container{
         .content-col{
