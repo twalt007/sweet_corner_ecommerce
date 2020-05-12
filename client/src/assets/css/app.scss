@@ -13,7 +13,7 @@ $bkpt-XXS: 366px;
 html{
     font-size: 100%; 
 }
-.app {
+.app{
     font-family: sans-serif;
     color: #754b23;
     position: relative;
@@ -36,7 +36,8 @@ html{
         font-size: 1.08em,
     }
     .app{
-        max-width: 1225px
+        max-width: 1225px;
+        margin: auto
     }
     .slogan, .tagline{
         font-family: allura;
