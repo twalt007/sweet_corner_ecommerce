@@ -9,7 +9,6 @@ class GuestCheckout extends Component{
     
     async handleGuestCheckout(formValues){
         const orderInfo = await this.props.createGuestOrder(formValues);
-        console.log("inside handle guest checkout")
         console.log("orderInfo: ", orderInfo)
         const redirectUrl = `/orders/guest/${orderInfo.orderID}?email=${orderInfo.email}`
         this.props.history.push(redirectUrl);
@@ -18,7 +17,6 @@ class GuestCheckout extends Component{
 
     render(){
         const {handleSubmit} = this.props;
-        console.log("this.props guest checout, looking for handleSubmit function: ", this.props)
         return (            
             <div className="guest-checkout-container">
                 <h4>Guest Checkout</h4>
