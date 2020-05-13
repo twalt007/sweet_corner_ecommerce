@@ -66,7 +66,7 @@ export const getActiveCart = () => async dispatch => {
             cart: resp.data
         })
     }catch (error){
-        console.log("getActiveCart error: ", error)
+        console.log("Error getting active cart: ", error)
     }
 }
 export const getCartTotals = () => async dispatch => {
@@ -100,7 +100,6 @@ export const createGuestOrder = (guest) => async dispatch => {
             lastName: guest.lastName
         }
         const resp = await axios.post(`/api/orders/guest`,data,axiosConfig);
-        console.log("create guest order response: ", resp);
         localStorage.removeItem('sc-cart-token');
         dispatch({
             type: types.CREATE_GUEST_ORDER,
@@ -114,7 +113,7 @@ export const createGuestOrder = (guest) => async dispatch => {
             orderID: resp.data.id
         })
     }catch (error){
-        console.log("Guest Checkout", error);
+        console.log("Error with guest checkout: ", error);
     }
 }
 
@@ -125,14 +124,13 @@ export const getGuestOrderDetails = (orderId,email) => async dispatch => {
                 email: email
             }
         });
-        console.log ("get guest order details resp: ", resp);
         dispatch({
             type: types.GET_GUEST_ORDER_DETAILS,
             orderDetails: resp.data
         })
     }
     catch(error){
-        console.log("get guest order details failed", error)
+        console.log("Error gettinget guest order details: ", error)
     }
 }
 
