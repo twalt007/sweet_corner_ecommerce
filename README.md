@@ -20,14 +20,14 @@ Server **CRUD** abilities built in **Node.js** using **Express** for efficient r
 ### Client
 + Bootstrap
 + React.js
-+ JSX
++ SCSS
 + Redux
 
 ### Server
 + Node.js
 + Express
 + MySQL
-+ jwt-simple
++ JSON Web Token
 
 ## Clone and Code (Set-up)
 ### 1. System Requirements
