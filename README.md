@@ -44,7 +44,7 @@ This project requires that the latest versions of Node.js and MySql be installed
     - **server:** `npm install`
 
 ### 3. Set up Local Database for Backend Development
-1. This project used **phpMyAdmin**, which requires **Apache** and **MySQL** to be running. If you are using the dev environment recommended above, you will already have these installed. 
+1. This project used **phpMyAdmin**, which requires **Apache** and **MySQL** to be running.  
     - To start, into your commander type:       
         - `sudo service apache2 start` 
         - `sudo service mysql start` 
