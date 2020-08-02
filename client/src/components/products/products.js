@@ -34,7 +34,7 @@ class Products extends Component{
         });
         return(
             <div className="products-container">
-                <h3 className="title">Our Products</h3>
+                <h3 className="title">Our Products Testing</h3>
                 <div className="view-type" onClick={changeView}>View</div>
                 <Row className={view ? "tile" : "list"}>
                     {productList}
