@@ -15,14 +15,14 @@ class Products extends Component{
         this.props.history.push(`/products/${id}`);
     }
 
-    changeView(){
-        console.log("productView changing", " Current Product View State: ", this.props.view)
-        this.props.changeProductView();
-    }
+    // changeView(){
+    //     console.log("productView changing", " Current Product View State: ", this.props.view)
+    //     this.props.changeProductView();
+    // }
 
     render(){
         const {products, view} = this.props;
-        console.log("products", this.props);
+        console.log("products test", this.props);
         const productList = products.map((product,index)=>{
             return (
                 <ProductItem 
@@ -35,7 +35,7 @@ class Products extends Component{
         return(
             <div className="products-container">
                 <h3 className="title">Our Products Testing</h3>
-                <div className="view-type" onClick={changeView}>View</div>
+                <div className="view-type" >View</div>
                 <Row className={view ? "tile" : "list"}>
                     {productList}
                 </Row>                

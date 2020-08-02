@@ -24,7 +24,7 @@ app.use(defaultErrorHandler);
 
 //define server for use below
 //https://stackoverflow.com/questions/38062689/how-do-i-get-the-http-server-from-the-express-app
-const server = app.listen(PORT, ()=>{
+app.listen(PORT, ()=>{
     console.log('server is running at @ localhost:' + PORT);
 });
 
@@ -34,9 +34,9 @@ const server = app.listen(PORT, ()=>{
 // Now for the socket.io stuff - NOTE THIS IS A RESTFUL HTTP SERVER
 // We are only using socket.io here to respond to the npmStop signal
 // To support IPC (Inter Process Communication) AKA RPC (Remote P.C.)
-const io = require('socket.io')(server);
-io.on('connection', (socketServer) => {
-  socketServer.on('npmStop', () => {
-    process.exit(0);
-  });
-});
+// const io = require('socket.io')(server);
+// io.on('connection', (socketServer) => {
+//   socketServer.on('npmStop', () => {
+//     process.exit(0);
+//   });
+// });
