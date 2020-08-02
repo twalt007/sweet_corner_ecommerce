@@ -13,6 +13,12 @@ export const getAllProducts = () => async dispatch => {
     }
 }
 
+export const changeProductView = () => {
+    return{
+        type: types.CHANGE_PRODUCT_VIEW,
+    }
+}
+
 export const getProductDetails = (productId) => async dispatch => {
     try{
         const resp = await axios.get(`/api/products/${productId}`);

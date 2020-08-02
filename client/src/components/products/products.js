@@ -1,12 +1,12 @@
 import React, {Component} from 'react'
 import './products.scss'
 import {connect} from 'react-redux'
-import {getAllProducts} from '../../actions/index'
+import {getAllProducts, changeProductView} from '../../actions/index'
 import ProductItem from './product_item';
 import {Row} from 'react-bootstrap';
 
 class Products extends Component{
-    
+        
     componentDidMount(){
         this.props.getAllProducts();
     }
@@ -15,8 +15,14 @@ class Products extends Component{
         this.props.history.push(`/products/${id}`);
     }
 
+    changeView(){
+        console.log("productView changing", " Current Product View State: ", this.props.view)
+        this.props.changeProductView();
+    }
+
     render(){
-        const {products} = this.props;
+        const {products, view} = this.props;
+        console.log("products", this.props);
         const productList = products.map((product,index)=>{
             return (
                 <ProductItem 
@@ -29,7 +35,8 @@ class Products extends Component{
         return(
             <div className="products-container">
                 <h3 className="title">Our Products</h3>
-                <Row className="list">
+                <div className="view-type" onClick={changeView}>View</div>
+                <Row className={view ? "tile" : "list"}>
                     {productList}
                 </Row>                
             </div>
@@ -38,9 +45,13 @@ class Products extends Component{
 }
 
 function mapStateToProps(state){
-    return {products: state.products.list};
+    return {
+        products: state.products.list,
+        view: state.products.view
+    };
 }
 
 export default connect(mapStateToProps,{
-    getAllProducts: getAllProducts
+    getAllProducts: getAllProducts,
+    changeProductView: changeProductView
 })(Products);
