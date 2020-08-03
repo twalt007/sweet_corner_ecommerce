@@ -7,6 +7,7 @@
     "dev": "npm-run-all --parallel dev:*",
     "dev:server": "nodemon server.js",
     "dev:client": "npm start --prefix client",
+    "stop": "node server.stop.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,7 +23,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "jwt-simple": "^0.5.6",
-    "mysql2": "^2.1.0"
+    "mysql2": "^2.1.0",
+    "socket.io": "^2.3.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.2",

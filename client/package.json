@@ -1,7 +1,7 @@
 {
   "name": "react-sweet-corner",
   "version": "1.1.0",
-  "description": "module 3 final project",
+  "description": "Front end to Sweet Corner CMS Full-Stack React Web-App",
   "main": "index.js",
   "proxy": {
     "/api/*": {

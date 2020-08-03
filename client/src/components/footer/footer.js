@@ -17,7 +17,7 @@ export default props =>{
                     <div className="copyright">Copyright &copy; {year} Sweet Corner. All rights reserved.</div>
                 </Col>
                 <Col className="phone-col">
-                    <div className="phone"><FontAwesomeIcon icon={faPhone} /> 800 264 2099</div>
+                    <a className="phone" href='tel:+8002642099'><FontAwesomeIcon icon={faPhone} /> 800 264 2099</a>
                 </Col>
             </Row>    
         </footer>
