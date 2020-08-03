@@ -1,10 +1,24 @@
 $bkpt-S: 768px;
 $bkpt-extra: 650px;
-$bkpt-XS-extra: 580px;
+$bkpt-XS-extra: 600px;
 $bkpt-XS: 480px;
 $bkpt-XXS: 366px;
 
 .products-container{
+    .title{
+        display: inline-block;
+        margin: 24px;
+        font-weight: 600;
+    }
+    .view-type{
+        position: inline;
+        margin:24px;
+        float: right;
+        font-size: 2em;
+    }
+    .view-type:hover{
+        color:orange;
+    }
     .border{
         border-radius: 25px;
         padding: 10px;
@@ -15,23 +29,52 @@ $bkpt-XXS: 366px;
         border-radius: 25px;
         color: white;
     }
-    .name{
-        font-weight: 600;
+    .tile{
+        .name{
+            font-weight: 600;
+        }
+        .cost{
+            font-size: 1.3rem;
+            font-weight: 400;
+        }
+        .product-item{
+            margin: 9px auto;
+            text-align: center;
+            .image{
+                height: 140px;
+                border-radius: 20px
+            }
+        }
     }
-    .title{
-        margin: 24px;
-        font-weight: 600;
+    .list >*{
+        display: inline-block;
     }
-    .cost{
-        font-size: 1.3rem;
-        font-weight: 400;
-    }
-    .product-item{
-        margin: 9px auto;
-        text-align: center;
-        .image{
-            height: 140px;
-            border-radius: 20px
+    .list{
+        .border{
+            border-radius: 15px;
+        }
+        .name{
+            font-weight: 600;
+            display: inline-block;
+            text-align: left;        
+        }
+        .caption{
+            padding-left: 15px;
+            display: inline-block;
+            text-align: left;        
+        }
+        .cost{            
+            float: right;
+            font-size: 1.3rem;
+            font-weight: 400;
+            padding-right: 13px;    
+        }
+        .product-item{
+            margin: 9px auto;
+            min-width: 90%;
+            .image{
+                display: none;
+            }
         }
     }
 }
@@ -129,6 +172,16 @@ $bkpt-XXS: 366px;
 }
 
 @media( max-width: $bkpt-XS-extra){
+    .products-container{
+        .list{
+            .name{
+                display: block;
+            }
+            .caption{
+                padding-left: 0;
+            }
+        }
+    }
     .details-container{
         .image-col{
             margin-bottom: 10px;

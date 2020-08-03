@@ -15,14 +15,12 @@ class Products extends Component{
         this.props.history.push(`/products/${id}`);
     }
 
-    // changeView(){
-    //     console.log("productView changing", " Current Product View State: ", this.props.view)
-    //     this.props.changeProductView();
-    // }
+    changeView(){
+        this.props.changeProductView();
+    }
 
     render(){
         const {products, view} = this.props;
-        console.log("products test", this.props);
         const productList = products.map((product,index)=>{
             return (
                 <ProductItem 
@@ -32,10 +30,14 @@ class Products extends Component{
                 />
             );
         });
+        // const viewIcon = (view) => {
+        //     if (view) return <i className="material-icons">format_list_bulleted</i>
+        //     else return <i className="material-icons">format_list_bulleted</i>
+        // }
         return(
             <div className="products-container">
-                <h3 className="title">Our Products Testing</h3>
-                <div className="view-type" >View</div>
+                <h3 className="title">Our Products</h3>
+                <i className="view-type material-icons" onClick={this.changeView.bind(this)} >{view ? "format_list_bulleted" : "view_module"}</i>
                 <Row className={view ? "tile" : "list"}>
                     {productList}
                 </Row>                
